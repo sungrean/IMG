@@ -377,8 +377,7 @@ namespace IMG128
                             openDevCfgDlgTimeOut = 0;
                         }
                         break;
-                    case FRAME_TYPE_SC: MessageBox.Show("更新设备信息成功！"); break;
-                    
+                    case FRAME_TYPE_SC: MessageBox.Show("更新设备信息成功！"); break;                    
                     //case FRAME_TYPE_LI: COMM_cmdLI(port); break;
                     //case FRAME_TYPE_LO: COMM_cmdLO(port); break;
                     //case FRAME_TYPE_SM: COMM_cmdSM(port, p); break;
