@@ -79,6 +79,12 @@
     <Compile Include="DevCfgDlg.Designer.cs">
       <DependentUpon>DevCfgDlg.cs</DependentUpon>
     </Compile>
+    <Compile Include="xxcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="xxcs.Designer.cs">
+      <DependentUpon>xxcs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="COMM.resx">
       <DependentUpon>COMM.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="DevCfgDlg.resx">
       <DependentUpon>DevCfgDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xxcs.resx">
+      <DependentUpon>xxcs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\app.manifest" />

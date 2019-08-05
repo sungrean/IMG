@@ -176,6 +176,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cBoxModelNum = new System.Windows.Forms.ComboBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.xxcs1 = new xxcs();
             this.tabPage2.SuspendLayout();
             this.gBoxAdvanceModel2.SuspendLayout();
             this.gBoxModel2.SuspendLayout();
@@ -199,6 +201,7 @@
             this.groupBox8.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // btUploadCfg
@@ -1751,12 +1754,31 @@
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Controls.Add(this.tabPage2);
+            this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Location = new System.Drawing.Point(12, 12);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(512, 391);
             this.tabControl2.TabIndex = 17;
             this.tabControl2.Tag = "";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.xxcs1);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(504, 365);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "线型参数3";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // xxcs1
+            // 
+            this.xxcs1.Location = new System.Drawing.Point(17, 6);
+            this.xxcs1.Name = "xxcs1";
+            this.xxcs1.Size = new System.Drawing.Size(468, 349);
+            this.xxcs1.TabIndex = 0;
             // 
             // DevCfgDlg
             // 
@@ -1814,6 +1836,7 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabControl2.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1968,6 +1991,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cBoxModelNum;
         private System.Windows.Forms.TabControl tabControl2;
-
+        private System.Windows.Forms.TabPage tabPage8;
+        private xxcs xxcs1;
     }
 }

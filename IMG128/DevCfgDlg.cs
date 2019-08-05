@@ -30,10 +30,6 @@ public enum ANAL_TYPE
     ANAL_SEAL = 0x0080,	//发现防水栓
     ANAL_INVALID_IMG = 0x8000	//无效图像
 } ;
-
-
-
-
 //output mode define
 public enum TYPE_OUTPUT
 {
@@ -133,7 +129,7 @@ namespace IMG128
     {
 
         const UInt32 CFG_VALID = 0x55AA55AA;
-        const Int32 MAX_MODEL_NUM = 2;         //#define MAX_MODEL_NUM	2	//最多线型数量
+        const Int32 MAX_MODEL_NUM = 3;         //#define MAX_MODEL_NUM	2	//最多线型数量
         const Int32 OUTPUT_NUM = 2;
         const Int32 INPUT_NUM = 4;
 
@@ -159,7 +155,7 @@ namespace IMG128
         }
 
 
-
+        #region 属性定义
         //获取输出引脚属性
         public bool IS_OUTPUT_NO(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_NO == (TYPE_OUTPUT)((UInt32)outputMode & 0x0001); }
         public bool IS_OUTPUT_NC(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_NC == (TYPE_OUTPUT)((UInt32)outputMode & 0x0001); }
@@ -188,6 +184,7 @@ namespace IMG128
         public bool IS_ANAL_STRIP_LEN(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_STRIP_LEN == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_STRIP_LEN); }
         public bool IS_ANAL_SPLAY(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SPLAY == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SPLAY); }
         public bool IS_ANAL_SEAL(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SEAL == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SEAL); }
+        #endregion
 
         /*********************************************************************************************************
             检验参数有效性。如果参数无效，设为默认参数
@@ -580,8 +577,7 @@ namespace IMG128
 
         private void btUpdateCfg_Click(object sender, EventArgs e)
         {
-            CFG_T cfg = alloc_CFG_T();
-            
+            CFG_T cfg = alloc_CFG_T();            
             setDefault(ref cfg);       //先设置参数为默认状态，保证各参数有效
 
             //通过控件参数更新配置信息
@@ -593,6 +589,7 @@ namespace IMG128
             cfg.wire = new WIRE_SETTING_T[MAX_MODEL_NUM];
             //wire[0]
             //Analyse type
+
             UInt32 type = 0;
             if (true == ckBoxCorePos1.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_CORE_POS;
@@ -673,6 +670,8 @@ namespace IMG128
             cfg.wire[1].tol.sealRatio = Convert.ToSingle(GetNumber(tBoxSealRatio2.Text));		//%
             cfg.wire[1].tol.sealLimit = Convert.ToSingle(GetNumber(tBoxSealLimit2.Text));		//%
             cfg.wire[1].tol.stripLimit = Convert.ToSingle(GetNumber(tBoxStripLimit2.Text));	//%
+
+            cfg.wire[2] = xxcs1.GetWIRE_SETTING();      //这里的xxcs线型参数是自定义的控件，直接通过控件获取需要的属性；
 
             //输出
             cfg.outputMode = new TYPE_OUTPUT[OUTPUT_NUM];
@@ -839,7 +838,8 @@ namespace IMG128
 
         private void DevCfgDlg_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
+            e.Cancel = true;
         }
     }
 }
