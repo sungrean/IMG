@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gBoxAdvanceModel2 = new System.Windows.Forms.GroupBox();
+            this.gBoxAdvanceModel = new System.Windows.Forms.GroupBox();
             this.tBoxSealRatio = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.tBoxStripLimit = new System.Windows.Forms.TextBox();
@@ -61,26 +61,26 @@
             this.ckBoxSealPos = new System.Windows.Forms.CheckBox();
             this.ckBoxStripPos = new System.Windows.Forms.CheckBox();
             this.ckBoxCoreWidth = new System.Windows.Forms.CheckBox();
-            this.gBoxAdvanceModel2.SuspendLayout();
+            this.gBoxAdvanceModel.SuspendLayout();
             this.gBoxModel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gBoxAdvanceModel2
+            // gBoxAdvanceModel
             // 
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxSealRatio);
-            this.gBoxAdvanceModel2.Controls.Add(this.label28);
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxStripLimit);
-            this.gBoxAdvanceModel2.Controls.Add(this.label29);
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxSealLimit);
-            this.gBoxAdvanceModel2.Controls.Add(this.label27);
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxVariationFilter);
-            this.gBoxAdvanceModel2.Controls.Add(this.label26);
-            this.gBoxAdvanceModel2.Location = new System.Drawing.Point(6, 246);
-            this.gBoxAdvanceModel2.Name = "gBoxAdvanceModel2";
-            this.gBoxAdvanceModel2.Size = new System.Drawing.Size(456, 99);
-            this.gBoxAdvanceModel2.TabIndex = 18;
-            this.gBoxAdvanceModel2.TabStop = false;
-            this.gBoxAdvanceModel2.Text = "高级设置";
+            this.gBoxAdvanceModel.Controls.Add(this.tBoxSealRatio);
+            this.gBoxAdvanceModel.Controls.Add(this.label28);
+            this.gBoxAdvanceModel.Controls.Add(this.tBoxStripLimit);
+            this.gBoxAdvanceModel.Controls.Add(this.label29);
+            this.gBoxAdvanceModel.Controls.Add(this.tBoxSealLimit);
+            this.gBoxAdvanceModel.Controls.Add(this.label27);
+            this.gBoxAdvanceModel.Controls.Add(this.tBoxVariationFilter);
+            this.gBoxAdvanceModel.Controls.Add(this.label26);
+            this.gBoxAdvanceModel.Location = new System.Drawing.Point(6, 246);
+            this.gBoxAdvanceModel.Name = "gBoxAdvanceModel";
+            this.gBoxAdvanceModel.Size = new System.Drawing.Size(456, 99);
+            this.gBoxAdvanceModel.TabIndex = 18;
+            this.gBoxAdvanceModel.TabStop = false;
+            this.gBoxAdvanceModel.Text = "高级设置";
             // 
             // tBoxSealRatio
             // 
@@ -395,12 +395,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gBoxAdvanceModel2);
+            this.Controls.Add(this.gBoxAdvanceModel);
             this.Controls.Add(this.gBoxModel);
             this.Name = "xxcs";
             this.Size = new System.Drawing.Size(468, 349);
-            this.gBoxAdvanceModel2.ResumeLayout(false);
-            this.gBoxAdvanceModel2.PerformLayout();
+            this.gBoxAdvanceModel.ResumeLayout(false);
+            this.gBoxAdvanceModel.PerformLayout();
             this.gBoxModel.ResumeLayout(false);
             this.gBoxModel.PerformLayout();
             this.ResumeLayout(false);
@@ -409,7 +409,7 @@
 
         #endregion
 
-        public System.Windows.Forms.GroupBox gBoxAdvanceModel2;
+        public System.Windows.Forms.GroupBox gBoxAdvanceModel;
         public System.Windows.Forms.TextBox tBoxSealRatio;
         public System.Windows.Forms.Label label28;
         public System.Windows.Forms.TextBox tBoxStripLimit;

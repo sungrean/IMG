@@ -84,6 +84,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protocol.cs" />
     <Compile Include="REC.cs" />
+    <Compile Include="tools.cs" />
     <Compile Include="TYPES.cs" />
     <Compile Include="DevCfgDlg.cs">
       <SubType>Form</SubType>

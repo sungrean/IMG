@@ -99,6 +99,7 @@
             this.Controls.Add(this.groupBox);
             this.Name = "input";
             this.Size = new System.Drawing.Size(216, 97);
+            this.Load += new System.EventHandler(this.Input_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.ResumeLayout(false);

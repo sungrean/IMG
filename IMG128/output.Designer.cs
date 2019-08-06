@@ -254,6 +254,7 @@
             this.Controls.Add(this.groupBox);
             this.Name = "output";
             this.Size = new System.Drawing.Size(463, 255);
+            this.Load += new System.EventHandler(this.Output_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -267,23 +268,23 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cBoxOutRstMode;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cBoxOutWire;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cBoxOutMode;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox tBoxDuration;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tBoxOutDelay;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rBtnIgnoreLearn;
-        private System.Windows.Forms.RadioButton rBtnIgnoreFirst;
-        private System.Windows.Forms.RadioButton rBtnNormal;
-        private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.RadioButton rBtnNC;
-        private System.Windows.Forms.RadioButton rBtnNO;
+        public System.Windows.Forms.ComboBox cBoxOutRstMode;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.ComboBox cBoxOutWire;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cBoxOutMode;
+        public System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.TextBox tBoxDuration;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox tBoxOutDelay;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.RadioButton rBtnIgnoreLearn;
+        public System.Windows.Forms.RadioButton rBtnIgnoreFirst;
+        public System.Windows.Forms.RadioButton rBtnNormal;
+        public System.Windows.Forms.GroupBox groupBox;
+        public System.Windows.Forms.RadioButton rBtnNC;
+        public System.Windows.Forms.RadioButton rBtnNO;
     }
 }
