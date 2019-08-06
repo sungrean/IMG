@@ -672,7 +672,7 @@ namespace IMG128
             cfg.wire[1].tol.stripLimit = Convert.ToSingle(GetNumber(tBoxStripLimit2.Text));	//%
 
             //cfg.wire[2] = xxcs1.GetWIRE_SETTING();                                                            //这里的xxcs线型参数是自定义的控件，直接通过控件获取需要的属性；
-
+            //---
             int indexWireSetting = 0;
             for(int i= tabControl2.TabPages.Count - MAX_MODEL_NUM; i< tabControl2.TabPages.Count;i++)            //从第四（tabControl2.TabPages.Count - MAX_MODEL_NUM）个page开始
             {
