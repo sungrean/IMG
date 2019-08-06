@@ -62,11 +62,23 @@
     <Compile Include="COMM.Designer.cs">
       <DependentUpon>COMM.cs</DependentUpon>
     </Compile>
+    <Compile Include="input.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="input.Designer.cs">
+      <DependentUpon>input.cs</DependentUpon>
+    </Compile>
     <Compile Include="MAIN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MAIN.Designer.cs">
       <DependentUpon>MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="output.Designer.cs">
+      <DependentUpon>output.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,8 +100,14 @@
     <EmbeddedResource Include="COMM.resx">
       <DependentUpon>COMM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="input.resx">
+      <DependentUpon>input.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MAIN.resx">
       <DependentUpon>MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output.resx">
+      <DependentUpon>output.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
