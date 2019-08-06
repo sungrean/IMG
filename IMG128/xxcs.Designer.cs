@@ -29,51 +29,51 @@
         private void InitializeComponent()
         {
             this.gBoxAdvanceModel2 = new System.Windows.Forms.GroupBox();
-            this.tBoxSealRatio2 = new System.Windows.Forms.TextBox();
+            this.tBoxSealRatio = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.tBoxStripLimit2 = new System.Windows.Forms.TextBox();
+            this.tBoxStripLimit = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.tBoxSealLimit2 = new System.Windows.Forms.TextBox();
+            this.tBoxSealLimit = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.tBoxVariationFilter2 = new System.Windows.Forms.TextBox();
+            this.tBoxVariationFilter = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.gBoxModel2 = new System.Windows.Forms.GroupBox();
-            this.tBoxSprayP2 = new System.Windows.Forms.TextBox();
-            this.tBoxStripLenP2 = new System.Windows.Forms.TextBox();
-            this.tBoxStripLenN2 = new System.Windows.Forms.TextBox();
-            this.tBoxSealWidthP2 = new System.Windows.Forms.TextBox();
-            this.tBoxSealWidthN2 = new System.Windows.Forms.TextBox();
-            this.tBoxCoreWidthP2 = new System.Windows.Forms.TextBox();
-            this.tBoxCoreWidthN2 = new System.Windows.Forms.TextBox();
-            this.tBoxStripPosP2 = new System.Windows.Forms.TextBox();
-            this.tBoxStripPosN2 = new System.Windows.Forms.TextBox();
-            this.tBoxSealPosP2 = new System.Windows.Forms.TextBox();
-            this.tBoxSealPosN2 = new System.Windows.Forms.TextBox();
+            this.gBoxModel = new System.Windows.Forms.GroupBox();
+            this.tBoxSprayP = new System.Windows.Forms.TextBox();
+            this.tBoxStripLenP = new System.Windows.Forms.TextBox();
+            this.tBoxStripLenN = new System.Windows.Forms.TextBox();
+            this.tBoxSealWidthP = new System.Windows.Forms.TextBox();
+            this.tBoxSealWidthN = new System.Windows.Forms.TextBox();
+            this.tBoxCoreWidthP = new System.Windows.Forms.TextBox();
+            this.tBoxCoreWidthN = new System.Windows.Forms.TextBox();
+            this.tBoxStripPosP = new System.Windows.Forms.TextBox();
+            this.tBoxStripPosN = new System.Windows.Forms.TextBox();
+            this.tBoxSealPosP = new System.Windows.Forms.TextBox();
+            this.tBoxSealPosN = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.tBoxCorePosP2 = new System.Windows.Forms.TextBox();
-            this.tBoxCorePosN2 = new System.Windows.Forms.TextBox();
-            this.ckBoxSeal2 = new System.Windows.Forms.CheckBox();
-            this.ckBoxSealWidth2 = new System.Windows.Forms.CheckBox();
-            this.ckBoxSplay2 = new System.Windows.Forms.CheckBox();
-            this.ckBoxCorePos2 = new System.Windows.Forms.CheckBox();
-            this.ckBoxStripLen2 = new System.Windows.Forms.CheckBox();
-            this.ckBoxSealPos2 = new System.Windows.Forms.CheckBox();
-            this.ckBoxStripPos2 = new System.Windows.Forms.CheckBox();
-            this.ckBoxCoreWidth2 = new System.Windows.Forms.CheckBox();
+            this.tBoxCorePosP = new System.Windows.Forms.TextBox();
+            this.tBoxCorePosN = new System.Windows.Forms.TextBox();
+            this.ckBoxSeal = new System.Windows.Forms.CheckBox();
+            this.ckBoxSealWidth = new System.Windows.Forms.CheckBox();
+            this.ckBoxSplay = new System.Windows.Forms.CheckBox();
+            this.ckBoxCorePos = new System.Windows.Forms.CheckBox();
+            this.ckBoxStripLen = new System.Windows.Forms.CheckBox();
+            this.ckBoxSealPos = new System.Windows.Forms.CheckBox();
+            this.ckBoxStripPos = new System.Windows.Forms.CheckBox();
+            this.ckBoxCoreWidth = new System.Windows.Forms.CheckBox();
             this.gBoxAdvanceModel2.SuspendLayout();
-            this.gBoxModel2.SuspendLayout();
+            this.gBoxModel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gBoxAdvanceModel2
             // 
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxSealRatio2);
+            this.gBoxAdvanceModel2.Controls.Add(this.tBoxSealRatio);
             this.gBoxAdvanceModel2.Controls.Add(this.label28);
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxStripLimit2);
+            this.gBoxAdvanceModel2.Controls.Add(this.tBoxStripLimit);
             this.gBoxAdvanceModel2.Controls.Add(this.label29);
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxSealLimit2);
+            this.gBoxAdvanceModel2.Controls.Add(this.tBoxSealLimit);
             this.gBoxAdvanceModel2.Controls.Add(this.label27);
-            this.gBoxAdvanceModel2.Controls.Add(this.tBoxVariationFilter2);
+            this.gBoxAdvanceModel2.Controls.Add(this.tBoxVariationFilter);
             this.gBoxAdvanceModel2.Controls.Add(this.label26);
             this.gBoxAdvanceModel2.Location = new System.Drawing.Point(6, 246);
             this.gBoxAdvanceModel2.Name = "gBoxAdvanceModel2";
@@ -82,13 +82,13 @@
             this.gBoxAdvanceModel2.TabStop = false;
             this.gBoxAdvanceModel2.Text = "高级设置";
             // 
-            // tBoxSealRatio2
+            // tBoxSealRatio
             // 
-            this.tBoxSealRatio2.Location = new System.Drawing.Point(325, 55);
-            this.tBoxSealRatio2.Name = "tBoxSealRatio2";
-            this.tBoxSealRatio2.Size = new System.Drawing.Size(56, 21);
-            this.tBoxSealRatio2.TabIndex = 7;
-            this.tBoxSealRatio2.Text = "85%";
+            this.tBoxSealRatio.Location = new System.Drawing.Point(325, 55);
+            this.tBoxSealRatio.Name = "tBoxSealRatio";
+            this.tBoxSealRatio.Size = new System.Drawing.Size(56, 21);
+            this.tBoxSealRatio.TabIndex = 7;
+            this.tBoxSealRatio.Text = "85%";
             // 
             // label28
             // 
@@ -100,13 +100,13 @@
             this.label28.Text = "防水栓方向判别系数";
             this.label28.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // tBoxStripLimit2
+            // tBoxStripLimit
             // 
-            this.tBoxStripLimit2.Location = new System.Drawing.Point(325, 28);
-            this.tBoxStripLimit2.Name = "tBoxStripLimit2";
-            this.tBoxStripLimit2.Size = new System.Drawing.Size(56, 21);
-            this.tBoxStripLimit2.TabIndex = 5;
-            this.tBoxStripLimit2.Text = "15%";
+            this.tBoxStripLimit.Location = new System.Drawing.Point(325, 28);
+            this.tBoxStripLimit.Name = "tBoxStripLimit";
+            this.tBoxStripLimit.Size = new System.Drawing.Size(56, 21);
+            this.tBoxStripLimit.TabIndex = 5;
+            this.tBoxStripLimit.Text = "15%";
             // 
             // label29
             // 
@@ -118,13 +118,13 @@
             this.label29.Text = "剥切位置识别系数";
             this.label29.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // tBoxSealLimit2
+            // tBoxSealLimit
             // 
-            this.tBoxSealLimit2.Location = new System.Drawing.Point(137, 55);
-            this.tBoxSealLimit2.Name = "tBoxSealLimit2";
-            this.tBoxSealLimit2.Size = new System.Drawing.Size(56, 21);
-            this.tBoxSealLimit2.TabIndex = 3;
-            this.tBoxSealLimit2.Text = "5%";
+            this.tBoxSealLimit.Location = new System.Drawing.Point(137, 55);
+            this.tBoxSealLimit.Name = "tBoxSealLimit";
+            this.tBoxSealLimit.Size = new System.Drawing.Size(56, 21);
+            this.tBoxSealLimit.TabIndex = 3;
+            this.tBoxSealLimit.Text = "5%";
             // 
             // label27
             // 
@@ -136,13 +136,13 @@
             this.label27.Text = "防水栓位置识别系数";
             this.label27.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // tBoxVariationFilter2
+            // tBoxVariationFilter
             // 
-            this.tBoxVariationFilter2.Location = new System.Drawing.Point(137, 28);
-            this.tBoxVariationFilter2.Name = "tBoxVariationFilter2";
-            this.tBoxVariationFilter2.Size = new System.Drawing.Size(56, 21);
-            this.tBoxVariationFilter2.TabIndex = 1;
-            this.tBoxVariationFilter2.Text = "1.250mm";
+            this.tBoxVariationFilter.Location = new System.Drawing.Point(137, 28);
+            this.tBoxVariationFilter.Name = "tBoxVariationFilter";
+            this.tBoxVariationFilter.Size = new System.Drawing.Size(56, 21);
+            this.tBoxVariationFilter.TabIndex = 1;
+            this.tBoxVariationFilter.Text = "1.250mm";
             // 
             // label26
             // 
@@ -154,126 +154,126 @@
             this.label26.Text = "分析步长";
             this.label26.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // gBoxModel2
+            // gBoxModel
             // 
-            this.gBoxModel2.Controls.Add(this.tBoxSprayP2);
-            this.gBoxModel2.Controls.Add(this.tBoxStripLenP2);
-            this.gBoxModel2.Controls.Add(this.tBoxStripLenN2);
-            this.gBoxModel2.Controls.Add(this.tBoxSealWidthP2);
-            this.gBoxModel2.Controls.Add(this.tBoxSealWidthN2);
-            this.gBoxModel2.Controls.Add(this.tBoxCoreWidthP2);
-            this.gBoxModel2.Controls.Add(this.tBoxCoreWidthN2);
-            this.gBoxModel2.Controls.Add(this.tBoxStripPosP2);
-            this.gBoxModel2.Controls.Add(this.tBoxStripPosN2);
-            this.gBoxModel2.Controls.Add(this.tBoxSealPosP2);
-            this.gBoxModel2.Controls.Add(this.tBoxSealPosN2);
-            this.gBoxModel2.Controls.Add(this.label17);
-            this.gBoxModel2.Controls.Add(this.label16);
-            this.gBoxModel2.Controls.Add(this.tBoxCorePosP2);
-            this.gBoxModel2.Controls.Add(this.tBoxCorePosN2);
-            this.gBoxModel2.Controls.Add(this.ckBoxSeal2);
-            this.gBoxModel2.Controls.Add(this.ckBoxSealWidth2);
-            this.gBoxModel2.Controls.Add(this.ckBoxSplay2);
-            this.gBoxModel2.Controls.Add(this.ckBoxCorePos2);
-            this.gBoxModel2.Controls.Add(this.ckBoxStripLen2);
-            this.gBoxModel2.Controls.Add(this.ckBoxSealPos2);
-            this.gBoxModel2.Controls.Add(this.ckBoxStripPos2);
-            this.gBoxModel2.Controls.Add(this.ckBoxCoreWidth2);
-            this.gBoxModel2.Location = new System.Drawing.Point(6, 4);
-            this.gBoxModel2.Name = "gBoxModel2";
-            this.gBoxModel2.Size = new System.Drawing.Size(456, 235);
-            this.gBoxModel2.TabIndex = 17;
-            this.gBoxModel2.TabStop = false;
-            this.gBoxModel2.Text = "线型检测参数";
-            this.gBoxModel2.Enter += new System.EventHandler(this.GBoxModel2_Enter);
+            this.gBoxModel.Controls.Add(this.tBoxSprayP);
+            this.gBoxModel.Controls.Add(this.tBoxStripLenP);
+            this.gBoxModel.Controls.Add(this.tBoxStripLenN);
+            this.gBoxModel.Controls.Add(this.tBoxSealWidthP);
+            this.gBoxModel.Controls.Add(this.tBoxSealWidthN);
+            this.gBoxModel.Controls.Add(this.tBoxCoreWidthP);
+            this.gBoxModel.Controls.Add(this.tBoxCoreWidthN);
+            this.gBoxModel.Controls.Add(this.tBoxStripPosP);
+            this.gBoxModel.Controls.Add(this.tBoxStripPosN);
+            this.gBoxModel.Controls.Add(this.tBoxSealPosP);
+            this.gBoxModel.Controls.Add(this.tBoxSealPosN);
+            this.gBoxModel.Controls.Add(this.label17);
+            this.gBoxModel.Controls.Add(this.label16);
+            this.gBoxModel.Controls.Add(this.tBoxCorePosP);
+            this.gBoxModel.Controls.Add(this.tBoxCorePosN);
+            this.gBoxModel.Controls.Add(this.ckBoxSeal);
+            this.gBoxModel.Controls.Add(this.ckBoxSealWidth);
+            this.gBoxModel.Controls.Add(this.ckBoxSplay);
+            this.gBoxModel.Controls.Add(this.ckBoxCorePos);
+            this.gBoxModel.Controls.Add(this.ckBoxStripLen);
+            this.gBoxModel.Controls.Add(this.ckBoxSealPos);
+            this.gBoxModel.Controls.Add(this.ckBoxStripPos);
+            this.gBoxModel.Controls.Add(this.ckBoxCoreWidth);
+            this.gBoxModel.Location = new System.Drawing.Point(6, 4);
+            this.gBoxModel.Name = "gBoxModel";
+            this.gBoxModel.Size = new System.Drawing.Size(456, 235);
+            this.gBoxModel.TabIndex = 17;
+            this.gBoxModel.TabStop = false;
+            this.gBoxModel.Text = "线型检测参数";
+            this.gBoxModel.Enter += new System.EventHandler(this.GBoxModel2_Enter);
             // 
-            // tBoxSprayP2
+            // tBoxSprayP
             // 
-            this.tBoxSprayP2.Location = new System.Drawing.Point(313, 191);
-            this.tBoxSprayP2.Name = "tBoxSprayP2";
-            this.tBoxSprayP2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxSprayP2.TabIndex = 31;
-            this.tBoxSprayP2.Text = "50%";
+            this.tBoxSprayP.Location = new System.Drawing.Point(313, 191);
+            this.tBoxSprayP.Name = "tBoxSprayP";
+            this.tBoxSprayP.Size = new System.Drawing.Size(61, 21);
+            this.tBoxSprayP.TabIndex = 31;
+            this.tBoxSprayP.Text = "50%";
             // 
-            // tBoxStripLenP2
+            // tBoxStripLenP
             // 
-            this.tBoxStripLenP2.Location = new System.Drawing.Point(313, 164);
-            this.tBoxStripLenP2.Name = "tBoxStripLenP2";
-            this.tBoxStripLenP2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxStripLenP2.TabIndex = 29;
-            this.tBoxStripLenP2.Text = "2.000mm";
+            this.tBoxStripLenP.Location = new System.Drawing.Point(313, 164);
+            this.tBoxStripLenP.Name = "tBoxStripLenP";
+            this.tBoxStripLenP.Size = new System.Drawing.Size(61, 21);
+            this.tBoxStripLenP.TabIndex = 29;
+            this.tBoxStripLenP.Text = "2.000mm";
             // 
-            // tBoxStripLenN2
+            // tBoxStripLenN
             // 
-            this.tBoxStripLenN2.Location = new System.Drawing.Point(228, 167);
-            this.tBoxStripLenN2.Name = "tBoxStripLenN2";
-            this.tBoxStripLenN2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxStripLenN2.TabIndex = 28;
-            this.tBoxStripLenN2.Text = "2.000mm";
+            this.tBoxStripLenN.Location = new System.Drawing.Point(228, 167);
+            this.tBoxStripLenN.Name = "tBoxStripLenN";
+            this.tBoxStripLenN.Size = new System.Drawing.Size(61, 21);
+            this.tBoxStripLenN.TabIndex = 28;
+            this.tBoxStripLenN.Text = "2.000mm";
             // 
-            // tBoxSealWidthP2
+            // tBoxSealWidthP
             // 
-            this.tBoxSealWidthP2.Location = new System.Drawing.Point(313, 137);
-            this.tBoxSealWidthP2.Name = "tBoxSealWidthP2";
-            this.tBoxSealWidthP2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxSealWidthP2.TabIndex = 27;
-            this.tBoxSealWidthP2.Text = "10%";
+            this.tBoxSealWidthP.Location = new System.Drawing.Point(313, 137);
+            this.tBoxSealWidthP.Name = "tBoxSealWidthP";
+            this.tBoxSealWidthP.Size = new System.Drawing.Size(61, 21);
+            this.tBoxSealWidthP.TabIndex = 27;
+            this.tBoxSealWidthP.Text = "10%";
             // 
-            // tBoxSealWidthN2
+            // tBoxSealWidthN
             // 
-            this.tBoxSealWidthN2.Location = new System.Drawing.Point(228, 137);
-            this.tBoxSealWidthN2.Name = "tBoxSealWidthN2";
-            this.tBoxSealWidthN2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxSealWidthN2.TabIndex = 26;
-            this.tBoxSealWidthN2.Text = "10%";
+            this.tBoxSealWidthN.Location = new System.Drawing.Point(228, 137);
+            this.tBoxSealWidthN.Name = "tBoxSealWidthN";
+            this.tBoxSealWidthN.Size = new System.Drawing.Size(61, 21);
+            this.tBoxSealWidthN.TabIndex = 26;
+            this.tBoxSealWidthN.Text = "10%";
             // 
-            // tBoxCoreWidthP2
+            // tBoxCoreWidthP
             // 
-            this.tBoxCoreWidthP2.Location = new System.Drawing.Point(313, 110);
-            this.tBoxCoreWidthP2.Name = "tBoxCoreWidthP2";
-            this.tBoxCoreWidthP2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxCoreWidthP2.TabIndex = 25;
-            this.tBoxCoreWidthP2.Text = "10%";
+            this.tBoxCoreWidthP.Location = new System.Drawing.Point(313, 110);
+            this.tBoxCoreWidthP.Name = "tBoxCoreWidthP";
+            this.tBoxCoreWidthP.Size = new System.Drawing.Size(61, 21);
+            this.tBoxCoreWidthP.TabIndex = 25;
+            this.tBoxCoreWidthP.Text = "10%";
             // 
-            // tBoxCoreWidthN2
+            // tBoxCoreWidthN
             // 
-            this.tBoxCoreWidthN2.Location = new System.Drawing.Point(228, 110);
-            this.tBoxCoreWidthN2.Name = "tBoxCoreWidthN2";
-            this.tBoxCoreWidthN2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxCoreWidthN2.TabIndex = 24;
-            this.tBoxCoreWidthN2.Text = "10%";
+            this.tBoxCoreWidthN.Location = new System.Drawing.Point(228, 110);
+            this.tBoxCoreWidthN.Name = "tBoxCoreWidthN";
+            this.tBoxCoreWidthN.Size = new System.Drawing.Size(61, 21);
+            this.tBoxCoreWidthN.TabIndex = 24;
+            this.tBoxCoreWidthN.Text = "10%";
             // 
-            // tBoxStripPosP2
+            // tBoxStripPosP
             // 
-            this.tBoxStripPosP2.Location = new System.Drawing.Point(313, 83);
-            this.tBoxStripPosP2.Name = "tBoxStripPosP2";
-            this.tBoxStripPosP2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxStripPosP2.TabIndex = 23;
-            this.tBoxStripPosP2.Text = "2.000mm";
+            this.tBoxStripPosP.Location = new System.Drawing.Point(313, 83);
+            this.tBoxStripPosP.Name = "tBoxStripPosP";
+            this.tBoxStripPosP.Size = new System.Drawing.Size(61, 21);
+            this.tBoxStripPosP.TabIndex = 23;
+            this.tBoxStripPosP.Text = "2.000mm";
             // 
-            // tBoxStripPosN2
+            // tBoxStripPosN
             // 
-            this.tBoxStripPosN2.Location = new System.Drawing.Point(228, 83);
-            this.tBoxStripPosN2.Name = "tBoxStripPosN2";
-            this.tBoxStripPosN2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxStripPosN2.TabIndex = 22;
-            this.tBoxStripPosN2.Text = "2.000mm";
+            this.tBoxStripPosN.Location = new System.Drawing.Point(228, 83);
+            this.tBoxStripPosN.Name = "tBoxStripPosN";
+            this.tBoxStripPosN.Size = new System.Drawing.Size(61, 21);
+            this.tBoxStripPosN.TabIndex = 22;
+            this.tBoxStripPosN.Text = "2.000mm";
             // 
-            // tBoxSealPosP2
+            // tBoxSealPosP
             // 
-            this.tBoxSealPosP2.Location = new System.Drawing.Point(313, 55);
-            this.tBoxSealPosP2.Name = "tBoxSealPosP2";
-            this.tBoxSealPosP2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxSealPosP2.TabIndex = 21;
-            this.tBoxSealPosP2.Text = "2.000mm";
+            this.tBoxSealPosP.Location = new System.Drawing.Point(313, 55);
+            this.tBoxSealPosP.Name = "tBoxSealPosP";
+            this.tBoxSealPosP.Size = new System.Drawing.Size(61, 21);
+            this.tBoxSealPosP.TabIndex = 21;
+            this.tBoxSealPosP.Text = "2.000mm";
             // 
-            // tBoxSealPosN2
+            // tBoxSealPosN
             // 
-            this.tBoxSealPosN2.Location = new System.Drawing.Point(228, 56);
-            this.tBoxSealPosN2.Name = "tBoxSealPosN2";
-            this.tBoxSealPosN2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxSealPosN2.TabIndex = 20;
-            this.tBoxSealPosN2.Text = "2.000mm";
+            this.tBoxSealPosN.Location = new System.Drawing.Point(228, 56);
+            this.tBoxSealPosN.Name = "tBoxSealPosN";
+            this.tBoxSealPosN.Size = new System.Drawing.Size(61, 21);
+            this.tBoxSealPosN.TabIndex = 20;
+            this.tBoxSealPosN.Text = "2.000mm";
             // 
             // label17
             // 
@@ -293,116 +293,116 @@
             this.label16.TabIndex = 18;
             this.label16.Text = "负偏差";
             // 
-            // tBoxCorePosP2
+            // tBoxCorePosP
             // 
-            this.tBoxCorePosP2.Location = new System.Drawing.Point(313, 30);
-            this.tBoxCorePosP2.Name = "tBoxCorePosP2";
-            this.tBoxCorePosP2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxCorePosP2.TabIndex = 17;
-            this.tBoxCorePosP2.Text = "2.000mm";
+            this.tBoxCorePosP.Location = new System.Drawing.Point(313, 30);
+            this.tBoxCorePosP.Name = "tBoxCorePosP";
+            this.tBoxCorePosP.Size = new System.Drawing.Size(61, 21);
+            this.tBoxCorePosP.TabIndex = 17;
+            this.tBoxCorePosP.Text = "2.000mm";
             // 
-            // tBoxCorePosN2
+            // tBoxCorePosN
             // 
-            this.tBoxCorePosN2.Location = new System.Drawing.Point(228, 30);
-            this.tBoxCorePosN2.Name = "tBoxCorePosN2";
-            this.tBoxCorePosN2.Size = new System.Drawing.Size(61, 21);
-            this.tBoxCorePosN2.TabIndex = 16;
-            this.tBoxCorePosN2.Text = "2.000mm";
+            this.tBoxCorePosN.Location = new System.Drawing.Point(228, 30);
+            this.tBoxCorePosN.Name = "tBoxCorePosN";
+            this.tBoxCorePosN.Size = new System.Drawing.Size(61, 21);
+            this.tBoxCorePosN.TabIndex = 16;
+            this.tBoxCorePosN.Text = "2.000mm";
             // 
-            // ckBoxSeal2
+            // ckBoxSeal
             // 
-            this.ckBoxSeal2.AutoSize = true;
-            this.ckBoxSeal2.Location = new System.Drawing.Point(87, 213);
-            this.ckBoxSeal2.Name = "ckBoxSeal2";
-            this.ckBoxSeal2.Size = new System.Drawing.Size(96, 16);
-            this.ckBoxSeal2.TabIndex = 15;
-            this.ckBoxSeal2.Text = "确保无防水栓";
-            this.ckBoxSeal2.UseVisualStyleBackColor = true;
+            this.ckBoxSeal.AutoSize = true;
+            this.ckBoxSeal.Location = new System.Drawing.Point(87, 213);
+            this.ckBoxSeal.Name = "ckBoxSeal";
+            this.ckBoxSeal.Size = new System.Drawing.Size(96, 16);
+            this.ckBoxSeal.TabIndex = 15;
+            this.ckBoxSeal.Text = "确保无防水栓";
+            this.ckBoxSeal.UseVisualStyleBackColor = true;
             // 
-            // ckBoxSealWidth2
+            // ckBoxSealWidth
             // 
-            this.ckBoxSealWidth2.AutoSize = true;
-            this.ckBoxSealWidth2.Location = new System.Drawing.Point(87, 137);
-            this.ckBoxSealWidth2.Name = "ckBoxSealWidth2";
-            this.ckBoxSealWidth2.Size = new System.Drawing.Size(84, 16);
-            this.ckBoxSealWidth2.TabIndex = 12;
-            this.ckBoxSealWidth2.Text = "防水栓直径";
-            this.ckBoxSealWidth2.UseVisualStyleBackColor = true;
+            this.ckBoxSealWidth.AutoSize = true;
+            this.ckBoxSealWidth.Location = new System.Drawing.Point(87, 137);
+            this.ckBoxSealWidth.Name = "ckBoxSealWidth";
+            this.ckBoxSealWidth.Size = new System.Drawing.Size(84, 16);
+            this.ckBoxSealWidth.TabIndex = 12;
+            this.ckBoxSealWidth.Text = "防水栓直径";
+            this.ckBoxSealWidth.UseVisualStyleBackColor = true;
             // 
-            // ckBoxSplay2
+            // ckBoxSplay
             // 
-            this.ckBoxSplay2.AutoSize = true;
-            this.ckBoxSplay2.Location = new System.Drawing.Point(87, 191);
-            this.ckBoxSplay2.Name = "ckBoxSplay2";
-            this.ckBoxSplay2.Size = new System.Drawing.Size(96, 16);
-            this.ckBoxSplay2.TabIndex = 14;
-            this.ckBoxSplay2.Text = "线芯分叉宽度";
-            this.ckBoxSplay2.UseVisualStyleBackColor = true;
+            this.ckBoxSplay.AutoSize = true;
+            this.ckBoxSplay.Location = new System.Drawing.Point(87, 191);
+            this.ckBoxSplay.Name = "ckBoxSplay";
+            this.ckBoxSplay.Size = new System.Drawing.Size(96, 16);
+            this.ckBoxSplay.TabIndex = 14;
+            this.ckBoxSplay.Text = "线芯分叉宽度";
+            this.ckBoxSplay.UseVisualStyleBackColor = true;
             // 
-            // ckBoxCorePos2
+            // ckBoxCorePos
             // 
-            this.ckBoxCorePos2.AutoSize = true;
-            this.ckBoxCorePos2.Checked = true;
-            this.ckBoxCorePos2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckBoxCorePos2.Location = new System.Drawing.Point(87, 30);
-            this.ckBoxCorePos2.Name = "ckBoxCorePos2";
-            this.ckBoxCorePos2.Size = new System.Drawing.Size(72, 16);
-            this.ckBoxCorePos2.TabIndex = 8;
-            this.ckBoxCorePos2.Text = "线端位置";
-            this.ckBoxCorePos2.UseVisualStyleBackColor = true;
+            this.ckBoxCorePos.AutoSize = true;
+            this.ckBoxCorePos.Checked = true;
+            this.ckBoxCorePos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckBoxCorePos.Location = new System.Drawing.Point(87, 30);
+            this.ckBoxCorePos.Name = "ckBoxCorePos";
+            this.ckBoxCorePos.Size = new System.Drawing.Size(72, 16);
+            this.ckBoxCorePos.TabIndex = 8;
+            this.ckBoxCorePos.Text = "线端位置";
+            this.ckBoxCorePos.UseVisualStyleBackColor = true;
             // 
-            // ckBoxStripLen2
+            // ckBoxStripLen
             // 
-            this.ckBoxStripLen2.AutoSize = true;
-            this.ckBoxStripLen2.Location = new System.Drawing.Point(87, 167);
-            this.ckBoxStripLen2.Name = "ckBoxStripLen2";
-            this.ckBoxStripLen2.Size = new System.Drawing.Size(72, 16);
-            this.ckBoxStripLen2.TabIndex = 13;
-            this.ckBoxStripLen2.Text = "剥切长度";
-            this.ckBoxStripLen2.UseVisualStyleBackColor = true;
+            this.ckBoxStripLen.AutoSize = true;
+            this.ckBoxStripLen.Location = new System.Drawing.Point(87, 167);
+            this.ckBoxStripLen.Name = "ckBoxStripLen";
+            this.ckBoxStripLen.Size = new System.Drawing.Size(72, 16);
+            this.ckBoxStripLen.TabIndex = 13;
+            this.ckBoxStripLen.Text = "剥切长度";
+            this.ckBoxStripLen.UseVisualStyleBackColor = true;
             // 
-            // ckBoxSealPos2
+            // ckBoxSealPos
             // 
-            this.ckBoxSealPos2.AutoSize = true;
-            this.ckBoxSealPos2.Location = new System.Drawing.Point(87, 55);
-            this.ckBoxSealPos2.Name = "ckBoxSealPos2";
-            this.ckBoxSealPos2.Size = new System.Drawing.Size(84, 16);
-            this.ckBoxSealPos2.TabIndex = 9;
-            this.ckBoxSealPos2.Text = "防水栓位置";
-            this.ckBoxSealPos2.UseVisualStyleBackColor = true;
+            this.ckBoxSealPos.AutoSize = true;
+            this.ckBoxSealPos.Location = new System.Drawing.Point(87, 55);
+            this.ckBoxSealPos.Name = "ckBoxSealPos";
+            this.ckBoxSealPos.Size = new System.Drawing.Size(84, 16);
+            this.ckBoxSealPos.TabIndex = 9;
+            this.ckBoxSealPos.Text = "防水栓位置";
+            this.ckBoxSealPos.UseVisualStyleBackColor = true;
             // 
-            // ckBoxStripPos2
+            // ckBoxStripPos
             // 
-            this.ckBoxStripPos2.AutoSize = true;
-            this.ckBoxStripPos2.Location = new System.Drawing.Point(87, 83);
-            this.ckBoxStripPos2.Name = "ckBoxStripPos2";
-            this.ckBoxStripPos2.Size = new System.Drawing.Size(72, 16);
-            this.ckBoxStripPos2.TabIndex = 10;
-            this.ckBoxStripPos2.Text = "剥切位置";
-            this.ckBoxStripPos2.UseVisualStyleBackColor = true;
+            this.ckBoxStripPos.AutoSize = true;
+            this.ckBoxStripPos.Location = new System.Drawing.Point(87, 83);
+            this.ckBoxStripPos.Name = "ckBoxStripPos";
+            this.ckBoxStripPos.Size = new System.Drawing.Size(72, 16);
+            this.ckBoxStripPos.TabIndex = 10;
+            this.ckBoxStripPos.Text = "剥切位置";
+            this.ckBoxStripPos.UseVisualStyleBackColor = true;
             // 
-            // ckBoxCoreWidth2
+            // ckBoxCoreWidth
             // 
-            this.ckBoxCoreWidth2.AutoSize = true;
-            this.ckBoxCoreWidth2.Location = new System.Drawing.Point(87, 110);
-            this.ckBoxCoreWidth2.Name = "ckBoxCoreWidth2";
-            this.ckBoxCoreWidth2.Size = new System.Drawing.Size(72, 16);
-            this.ckBoxCoreWidth2.TabIndex = 11;
-            this.ckBoxCoreWidth2.Text = "线芯直径";
-            this.ckBoxCoreWidth2.UseVisualStyleBackColor = true;
+            this.ckBoxCoreWidth.AutoSize = true;
+            this.ckBoxCoreWidth.Location = new System.Drawing.Point(87, 110);
+            this.ckBoxCoreWidth.Name = "ckBoxCoreWidth";
+            this.ckBoxCoreWidth.Size = new System.Drawing.Size(72, 16);
+            this.ckBoxCoreWidth.TabIndex = 11;
+            this.ckBoxCoreWidth.Text = "线芯直径";
+            this.ckBoxCoreWidth.UseVisualStyleBackColor = true;
             // 
             // xxcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gBoxAdvanceModel2);
-            this.Controls.Add(this.gBoxModel2);
+            this.Controls.Add(this.gBoxModel);
             this.Name = "xxcs";
             this.Size = new System.Drawing.Size(468, 349);
             this.gBoxAdvanceModel2.ResumeLayout(false);
             this.gBoxAdvanceModel2.PerformLayout();
-            this.gBoxModel2.ResumeLayout(false);
-            this.gBoxModel2.PerformLayout();
+            this.gBoxModel.ResumeLayout(false);
+            this.gBoxModel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -410,37 +410,37 @@
         #endregion
 
         public System.Windows.Forms.GroupBox gBoxAdvanceModel2;
-        public System.Windows.Forms.TextBox tBoxSealRatio2;
+        public System.Windows.Forms.TextBox tBoxSealRatio;
         public System.Windows.Forms.Label label28;
-        public System.Windows.Forms.TextBox tBoxStripLimit2;
+        public System.Windows.Forms.TextBox tBoxStripLimit;
         public System.Windows.Forms.Label label29;
-        public System.Windows.Forms.TextBox tBoxSealLimit2;
+        public System.Windows.Forms.TextBox tBoxSealLimit;
         public System.Windows.Forms.Label label27;
-        public System.Windows.Forms.TextBox tBoxVariationFilter2;
+        public System.Windows.Forms.TextBox tBoxVariationFilter;
         public System.Windows.Forms.Label label26;
-        public System.Windows.Forms.GroupBox gBoxModel2;
-        public System.Windows.Forms.TextBox tBoxSprayP2;
-        public System.Windows.Forms.TextBox tBoxStripLenP2;
-        public System.Windows.Forms.TextBox tBoxStripLenN2;
-        public System.Windows.Forms.TextBox tBoxSealWidthP2;
-        public System.Windows.Forms.TextBox tBoxSealWidthN2;
-        public System.Windows.Forms.TextBox tBoxCoreWidthP2;
-        public System.Windows.Forms.TextBox tBoxCoreWidthN2;
-        public System.Windows.Forms.TextBox tBoxStripPosP2;
-        public System.Windows.Forms.TextBox tBoxStripPosN2;
-        public System.Windows.Forms.TextBox tBoxSealPosP2;
-        public System.Windows.Forms.TextBox tBoxSealPosN2;
+        public System.Windows.Forms.GroupBox gBoxModel;
+        public System.Windows.Forms.TextBox tBoxSprayP;
+        public System.Windows.Forms.TextBox tBoxStripLenP;
+        public System.Windows.Forms.TextBox tBoxStripLenN;
+        public System.Windows.Forms.TextBox tBoxSealWidthP;
+        public System.Windows.Forms.TextBox tBoxSealWidthN;
+        public System.Windows.Forms.TextBox tBoxCoreWidthP;
+        public System.Windows.Forms.TextBox tBoxCoreWidthN;
+        public System.Windows.Forms.TextBox tBoxStripPosP;
+        public System.Windows.Forms.TextBox tBoxStripPosN;
+        public System.Windows.Forms.TextBox tBoxSealPosP;
+        public System.Windows.Forms.TextBox tBoxSealPosN;
         public System.Windows.Forms.Label label17;
         public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.TextBox tBoxCorePosP2;
-        public System.Windows.Forms.TextBox tBoxCorePosN2;
-        public System.Windows.Forms.CheckBox ckBoxSeal2;
-        public System.Windows.Forms.CheckBox ckBoxSealWidth2;
-        public System.Windows.Forms.CheckBox ckBoxSplay2;
-        public System.Windows.Forms.CheckBox ckBoxCorePos2;
-        public System.Windows.Forms.CheckBox ckBoxStripLen2;
-        public System.Windows.Forms.CheckBox ckBoxSealPos2;
-        public System.Windows.Forms.CheckBox ckBoxStripPos2;
-        public System.Windows.Forms.CheckBox ckBoxCoreWidth2;
+        public System.Windows.Forms.TextBox tBoxCorePosP;
+        public System.Windows.Forms.TextBox tBoxCorePosN;
+        public System.Windows.Forms.CheckBox ckBoxSeal;
+        public System.Windows.Forms.CheckBox ckBoxSealWidth;
+        public System.Windows.Forms.CheckBox ckBoxSplay;
+        public System.Windows.Forms.CheckBox ckBoxCorePos;
+        public System.Windows.Forms.CheckBox ckBoxStripLen;
+        public System.Windows.Forms.CheckBox ckBoxSealPos;
+        public System.Windows.Forms.CheckBox ckBoxStripPos;
+        public System.Windows.Forms.CheckBox ckBoxCoreWidth;
     }
 }

@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.cBoxInputPolLvl1 = new System.Windows.Forms.ComboBox();
+            this.cBoxInputPolLvl = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cBoxInputModeLvl1 = new System.Windows.Forms.ComboBox();
-            this.groupBox10.SuspendLayout();
+            this.cBoxInputModeLvl = new System.Windows.Forms.ComboBox();
+            this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox10
+            // groupBox
             // 
-            this.groupBox10.Controls.Add(this.label13);
-            this.groupBox10.Controls.Add(this.cBoxInputPolLvl1);
-            this.groupBox10.Controls.Add(this.label12);
-            this.groupBox10.Controls.Add(this.cBoxInputModeLvl1);
-            this.groupBox10.Location = new System.Drawing.Point(3, 3);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(204, 88);
-            this.groupBox10.TabIndex = 19;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "输入1";
+            this.groupBox.Controls.Add(this.label13);
+            this.groupBox.Controls.Add(this.cBoxInputPolLvl);
+            this.groupBox.Controls.Add(this.label12);
+            this.groupBox.Controls.Add(this.cBoxInputModeLvl);
+            this.groupBox.Location = new System.Drawing.Point(3, 3);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(204, 88);
+            this.groupBox.TabIndex = 19;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "输入";
             // 
             // label13
             // 
@@ -58,17 +58,17 @@
             this.label13.TabIndex = 22;
             this.label13.Text = "输入极性";
             // 
-            // cBoxInputPolLvl1
+            // cBoxInputPolLvl
             // 
-            this.cBoxInputPolLvl1.FormattingEnabled = true;
-            this.cBoxInputPolLvl1.Items.AddRange(new object[] {
+            this.cBoxInputPolLvl.FormattingEnabled = true;
+            this.cBoxInputPolLvl.Items.AddRange(new object[] {
             "上升沿触发",
             "下降沿触发"});
-            this.cBoxInputPolLvl1.Location = new System.Drawing.Point(72, 51);
-            this.cBoxInputPolLvl1.Name = "cBoxInputPolLvl1";
-            this.cBoxInputPolLvl1.Size = new System.Drawing.Size(121, 20);
-            this.cBoxInputPolLvl1.TabIndex = 21;
-            this.cBoxInputPolLvl1.Text = "下降沿触发";
+            this.cBoxInputPolLvl.Location = new System.Drawing.Point(72, 51);
+            this.cBoxInputPolLvl.Name = "cBoxInputPolLvl";
+            this.cBoxInputPolLvl.Size = new System.Drawing.Size(121, 20);
+            this.cBoxInputPolLvl.TabIndex = 21;
+            this.cBoxInputPolLvl.Text = "下降沿触发";
             // 
             // label12
             // 
@@ -79,38 +79,38 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "输入模式";
             // 
-            // cBoxInputModeLvl1
+            // cBoxInputModeLvl
             // 
-            this.cBoxInputModeLvl1.FormattingEnabled = true;
-            this.cBoxInputModeLvl1.Items.AddRange(new object[] {
+            this.cBoxInputModeLvl.FormattingEnabled = true;
+            this.cBoxInputModeLvl.Items.AddRange(new object[] {
             "进入学习模式",
             "触发采样",
             "进入设置模式"});
-            this.cBoxInputModeLvl1.Location = new System.Drawing.Point(72, 25);
-            this.cBoxInputModeLvl1.Name = "cBoxInputModeLvl1";
-            this.cBoxInputModeLvl1.Size = new System.Drawing.Size(121, 20);
-            this.cBoxInputModeLvl1.TabIndex = 19;
-            this.cBoxInputModeLvl1.Text = "进入学习模式";
+            this.cBoxInputModeLvl.Location = new System.Drawing.Point(72, 25);
+            this.cBoxInputModeLvl.Name = "cBoxInputModeLvl";
+            this.cBoxInputModeLvl.Size = new System.Drawing.Size(121, 20);
+            this.cBoxInputModeLvl.TabIndex = 19;
+            this.cBoxInputModeLvl.Text = "进入学习模式";
             // 
             // input
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox);
             this.Name = "input";
             this.Size = new System.Drawing.Size(216, 97);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cBoxInputPolLvl1;
+        private System.Windows.Forms.ComboBox cBoxInputPolLvl;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cBoxInputModeLvl1;
+        private System.Windows.Forms.ComboBox cBoxInputModeLvl;
     }
 }

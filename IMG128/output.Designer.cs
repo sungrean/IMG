@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cBoxOutRstMode1 = new System.Windows.Forms.ComboBox();
+            this.cBoxOutRstMode = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cBoxOutWire1 = new System.Windows.Forms.ComboBox();
+            this.cBoxOutWire = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cBoxOutMode1 = new System.Windows.Forms.ComboBox();
+            this.cBoxOutMode = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tBoxDuration1 = new System.Windows.Forms.TextBox();
+            this.tBoxDuration = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tBoxOutDelay1 = new System.Windows.Forms.TextBox();
+            this.tBoxOutDelay = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rBtnIgnoreLearn1 = new System.Windows.Forms.RadioButton();
-            this.rBtnIgnoreFirst1 = new System.Windows.Forms.RadioButton();
-            this.rBtnNormal1 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rBtnNC1 = new System.Windows.Forms.RadioButton();
-            this.rBtnNO1 = new System.Windows.Forms.RadioButton();
+            this.rBtnIgnoreLearn = new System.Windows.Forms.RadioButton();
+            this.rBtnIgnoreFirst = new System.Windows.Forms.RadioButton();
+            this.rBtnNormal = new System.Windows.Forms.RadioButton();
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.rBtnNC = new System.Windows.Forms.RadioButton();
+            this.rBtnNO = new System.Windows.Forms.RadioButton();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cBoxOutRstMode1
+            // cBoxOutRstMode
             // 
-            this.cBoxOutRstMode1.Enabled = false;
-            this.cBoxOutRstMode1.FormattingEnabled = true;
-            this.cBoxOutRstMode1.Items.AddRange(new object[] {
+            this.cBoxOutRstMode.Enabled = false;
+            this.cBoxOutRstMode.FormattingEnabled = true;
+            this.cBoxOutRstMode.Items.AddRange(new object[] {
             "延时自动复位"});
-            this.cBoxOutRstMode1.Location = new System.Drawing.Point(302, 213);
-            this.cBoxOutRstMode1.Name = "cBoxOutRstMode1";
-            this.cBoxOutRstMode1.Size = new System.Drawing.Size(121, 20);
-            this.cBoxOutRstMode1.TabIndex = 22;
-            this.cBoxOutRstMode1.Text = "延时自动复位";
+            this.cBoxOutRstMode.Location = new System.Drawing.Point(302, 213);
+            this.cBoxOutRstMode.Name = "cBoxOutRstMode";
+            this.cBoxOutRstMode.Size = new System.Drawing.Size(121, 20);
+            this.cBoxOutRstMode.TabIndex = 22;
+            this.cBoxOutRstMode.Text = "延时自动复位";
             // 
             // label6
             // 
@@ -81,17 +81,17 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "线型";
             // 
-            // cBoxOutWire1
+            // cBoxOutWire
             // 
-            this.cBoxOutWire1.FormattingEnabled = true;
-            this.cBoxOutWire1.Items.AddRange(new object[] {
+            this.cBoxOutWire.FormattingEnabled = true;
+            this.cBoxOutWire.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.cBoxOutWire1.Location = new System.Drawing.Point(60, 142);
-            this.cBoxOutWire1.Name = "cBoxOutWire1";
-            this.cBoxOutWire1.Size = new System.Drawing.Size(121, 20);
-            this.cBoxOutWire1.TabIndex = 19;
-            this.cBoxOutWire1.Text = "1";
+            this.cBoxOutWire.Location = new System.Drawing.Point(60, 142);
+            this.cBoxOutWire.Name = "cBoxOutWire";
+            this.cBoxOutWire.Size = new System.Drawing.Size(121, 20);
+            this.cBoxOutWire.TabIndex = 19;
+            this.cBoxOutWire.Text = "1";
             // 
             // label2
             // 
@@ -102,24 +102,24 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "输出模式";
             // 
-            // cBoxOutMode1
+            // cBoxOutMode
             // 
-            this.cBoxOutMode1.FormattingEnabled = true;
-            this.cBoxOutMode1.Items.AddRange(new object[] {
+            this.cBoxOutMode.FormattingEnabled = true;
+            this.cBoxOutMode.Items.AddRange(new object[] {
             "合格品输出脉冲",
             "不良品输出脉冲",
             "合格/不良品都输出脉冲"});
-            this.cBoxOutMode1.Location = new System.Drawing.Point(60, 110);
-            this.cBoxOutMode1.Name = "cBoxOutMode1";
-            this.cBoxOutMode1.Size = new System.Drawing.Size(121, 20);
-            this.cBoxOutMode1.TabIndex = 17;
-            this.cBoxOutMode1.Text = "合格品输出脉冲";
+            this.cBoxOutMode.Location = new System.Drawing.Point(60, 110);
+            this.cBoxOutMode.Name = "cBoxOutMode";
+            this.cBoxOutMode.Size = new System.Drawing.Size(121, 20);
+            this.cBoxOutMode.TabIndex = 17;
+            this.cBoxOutMode.Text = "合格品输出脉冲";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.tBoxDuration1);
+            this.groupBox4.Controls.Add(this.tBoxDuration);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.tBoxOutDelay1);
+            this.groupBox4.Controls.Add(this.tBoxOutDelay);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(212, 113);
             this.groupBox4.Name = "groupBox4";
@@ -128,13 +128,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "复位时间";
             // 
-            // tBoxDuration1
+            // tBoxDuration
             // 
-            this.tBoxDuration1.Location = new System.Drawing.Point(111, 54);
-            this.tBoxDuration1.Name = "tBoxDuration1";
-            this.tBoxDuration1.Size = new System.Drawing.Size(100, 21);
-            this.tBoxDuration1.TabIndex = 13;
-            this.tBoxDuration1.Text = "100";
+            this.tBoxDuration.Location = new System.Drawing.Point(111, 54);
+            this.tBoxDuration.Name = "tBoxDuration";
+            this.tBoxDuration.Size = new System.Drawing.Size(100, 21);
+            this.tBoxDuration.TabIndex = 13;
+            this.tBoxDuration.Text = "100";
             // 
             // label5
             // 
@@ -145,13 +145,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "持续时间(ms)";
             // 
-            // tBoxOutDelay1
+            // tBoxOutDelay
             // 
-            this.tBoxOutDelay1.Location = new System.Drawing.Point(111, 27);
-            this.tBoxOutDelay1.Name = "tBoxOutDelay1";
-            this.tBoxOutDelay1.Size = new System.Drawing.Size(100, 21);
-            this.tBoxOutDelay1.TabIndex = 11;
-            this.tBoxOutDelay1.Text = "0";
+            this.tBoxOutDelay.Location = new System.Drawing.Point(111, 27);
+            this.tBoxOutDelay.Name = "tBoxOutDelay";
+            this.tBoxOutDelay.Size = new System.Drawing.Size(100, 21);
+            this.tBoxOutDelay.TabIndex = 11;
+            this.tBoxOutDelay.Text = "0";
             // 
             // label4
             // 
@@ -164,9 +164,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.rBtnIgnoreLearn1);
-            this.groupBox3.Controls.Add(this.rBtnIgnoreFirst1);
-            this.groupBox3.Controls.Add(this.rBtnNormal1);
+            this.groupBox3.Controls.Add(this.rBtnIgnoreLearn);
+            this.groupBox3.Controls.Add(this.rBtnIgnoreFirst);
+            this.groupBox3.Controls.Add(this.rBtnNormal);
             this.groupBox3.Location = new System.Drawing.Point(212, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(240, 90);
@@ -174,92 +174,92 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "输出选项";
             // 
-            // rBtnIgnoreLearn1
+            // rBtnIgnoreLearn
             // 
-            this.rBtnIgnoreLearn1.AutoSize = true;
-            this.rBtnIgnoreLearn1.Location = new System.Drawing.Point(20, 64);
-            this.rBtnIgnoreLearn1.Name = "rBtnIgnoreLearn1";
-            this.rBtnIgnoreLearn1.Size = new System.Drawing.Size(95, 16);
-            this.rBtnIgnoreLearn1.TabIndex = 3;
-            this.rBtnIgnoreLearn1.Text = "忽略所有学习";
-            this.rBtnIgnoreLearn1.UseVisualStyleBackColor = true;
+            this.rBtnIgnoreLearn.AutoSize = true;
+            this.rBtnIgnoreLearn.Location = new System.Drawing.Point(20, 64);
+            this.rBtnIgnoreLearn.Name = "rBtnIgnoreLearn";
+            this.rBtnIgnoreLearn.Size = new System.Drawing.Size(95, 16);
+            this.rBtnIgnoreLearn.TabIndex = 3;
+            this.rBtnIgnoreLearn.Text = "忽略所有学习";
+            this.rBtnIgnoreLearn.UseVisualStyleBackColor = true;
             // 
-            // rBtnIgnoreFirst1
+            // rBtnIgnoreFirst
             // 
-            this.rBtnIgnoreFirst1.AutoSize = true;
-            this.rBtnIgnoreFirst1.Location = new System.Drawing.Point(20, 42);
-            this.rBtnIgnoreFirst1.Name = "rBtnIgnoreFirst1";
-            this.rBtnIgnoreFirst1.Size = new System.Drawing.Size(107, 16);
-            this.rBtnIgnoreFirst1.TabIndex = 2;
-            this.rBtnIgnoreFirst1.Text = "忽略学习第一条";
-            this.rBtnIgnoreFirst1.UseVisualStyleBackColor = true;
+            this.rBtnIgnoreFirst.AutoSize = true;
+            this.rBtnIgnoreFirst.Location = new System.Drawing.Point(20, 42);
+            this.rBtnIgnoreFirst.Name = "rBtnIgnoreFirst";
+            this.rBtnIgnoreFirst.Size = new System.Drawing.Size(107, 16);
+            this.rBtnIgnoreFirst.TabIndex = 2;
+            this.rBtnIgnoreFirst.Text = "忽略学习第一条";
+            this.rBtnIgnoreFirst.UseVisualStyleBackColor = true;
             // 
-            // rBtnNormal1
+            // rBtnNormal
             // 
-            this.rBtnNormal1.AutoSize = true;
-            this.rBtnNormal1.Checked = true;
-            this.rBtnNormal1.Location = new System.Drawing.Point(20, 21);
-            this.rBtnNormal1.Name = "rBtnNormal1";
-            this.rBtnNormal1.Size = new System.Drawing.Size(71, 16);
-            this.rBtnNormal1.TabIndex = 1;
-            this.rBtnNormal1.TabStop = true;
-            this.rBtnNormal1.Text = "始终有效";
-            this.rBtnNormal1.UseVisualStyleBackColor = true;
+            this.rBtnNormal.AutoSize = true;
+            this.rBtnNormal.Checked = true;
+            this.rBtnNormal.Location = new System.Drawing.Point(20, 21);
+            this.rBtnNormal.Name = "rBtnNormal";
+            this.rBtnNormal.Size = new System.Drawing.Size(71, 16);
+            this.rBtnNormal.TabIndex = 1;
+            this.rBtnNormal.TabStop = true;
+            this.rBtnNormal.Text = "始终有效";
+            this.rBtnNormal.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // groupBox
             // 
-            this.groupBox2.Controls.Add(this.rBtnNC1);
-            this.groupBox2.Controls.Add(this.rBtnNO1);
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(178, 90);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "输出状态";
+            this.groupBox.Controls.Add(this.rBtnNC);
+            this.groupBox.Controls.Add(this.rBtnNO);
+            this.groupBox.Location = new System.Drawing.Point(3, 3);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(178, 90);
+            this.groupBox.TabIndex = 14;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "输出状态";
             // 
-            // rBtnNC1
+            // rBtnNC
             // 
-            this.rBtnNC1.AutoSize = true;
-            this.rBtnNC1.Location = new System.Drawing.Point(16, 51);
-            this.rBtnNC1.Name = "rBtnNC1";
-            this.rBtnNC1.Size = new System.Drawing.Size(47, 16);
-            this.rBtnNC1.TabIndex = 1;
-            this.rBtnNC1.Text = "常闭";
-            this.rBtnNC1.UseVisualStyleBackColor = true;
+            this.rBtnNC.AutoSize = true;
+            this.rBtnNC.Location = new System.Drawing.Point(16, 51);
+            this.rBtnNC.Name = "rBtnNC";
+            this.rBtnNC.Size = new System.Drawing.Size(47, 16);
+            this.rBtnNC.TabIndex = 1;
+            this.rBtnNC.Text = "常闭";
+            this.rBtnNC.UseVisualStyleBackColor = true;
             // 
-            // rBtnNO1
+            // rBtnNO
             // 
-            this.rBtnNO1.AutoSize = true;
-            this.rBtnNO1.Checked = true;
-            this.rBtnNO1.Location = new System.Drawing.Point(16, 29);
-            this.rBtnNO1.Name = "rBtnNO1";
-            this.rBtnNO1.Size = new System.Drawing.Size(47, 16);
-            this.rBtnNO1.TabIndex = 0;
-            this.rBtnNO1.TabStop = true;
-            this.rBtnNO1.Text = "常开";
-            this.rBtnNO1.UseVisualStyleBackColor = true;
+            this.rBtnNO.AutoSize = true;
+            this.rBtnNO.Checked = true;
+            this.rBtnNO.Location = new System.Drawing.Point(16, 29);
+            this.rBtnNO.Name = "rBtnNO";
+            this.rBtnNO.Size = new System.Drawing.Size(47, 16);
+            this.rBtnNO.TabIndex = 0;
+            this.rBtnNO.TabStop = true;
+            this.rBtnNO.Text = "常开";
+            this.rBtnNO.UseVisualStyleBackColor = true;
             // 
             // output
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cBoxOutRstMode1);
+            this.Controls.Add(this.cBoxOutRstMode);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cBoxOutWire1);
+            this.Controls.Add(this.cBoxOutWire);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cBoxOutMode1);
+            this.Controls.Add(this.cBoxOutMode);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox);
             this.Name = "output";
             this.Size = new System.Drawing.Size(463, 255);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,23 +267,23 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cBoxOutRstMode1;
+        private System.Windows.Forms.ComboBox cBoxOutRstMode;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cBoxOutWire1;
+        private System.Windows.Forms.ComboBox cBoxOutWire;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cBoxOutMode1;
+        private System.Windows.Forms.ComboBox cBoxOutMode;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox tBoxDuration1;
+        private System.Windows.Forms.TextBox tBoxDuration;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tBoxOutDelay1;
+        private System.Windows.Forms.TextBox tBoxOutDelay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rBtnIgnoreLearn1;
-        private System.Windows.Forms.RadioButton rBtnIgnoreFirst1;
-        private System.Windows.Forms.RadioButton rBtnNormal1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton rBtnNC1;
-        private System.Windows.Forms.RadioButton rBtnNO1;
+        private System.Windows.Forms.RadioButton rBtnIgnoreLearn;
+        private System.Windows.Forms.RadioButton rBtnIgnoreFirst;
+        private System.Windows.Forms.RadioButton rBtnNormal;
+        private System.Windows.Forms.GroupBox groupBox;
+        private System.Windows.Forms.RadioButton rBtnNC;
+        private System.Windows.Forms.RadioButton rBtnNO;
     }
 }

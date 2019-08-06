@@ -27,44 +27,44 @@ namespace IMG128
             //wire[1]   能不能将控件做成数组？这样就可以用for循环，就不用以下拷贝代码
 
             UInt32 type = 0;
-            if (true == ckBoxCorePos2.Checked)
+            if (true == ckBoxCorePos.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_CORE_POS;
-            if (true == ckBoxSeal2.Checked)
+            if (true == ckBoxSeal.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_SEAL_POS;
-            if (true == ckBoxStripPos2.Checked)
+            if (true == ckBoxStripPos.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_STRIP_POS;
-            if (true == ckBoxCoreWidth2.Checked)
+            if (true == ckBoxCoreWidth.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_CORE_WIDTH;
-            if (true == ckBoxSealWidth2.Checked)
+            if (true == ckBoxSealWidth.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_SEAL_WIDTH;
-            if (true == ckBoxStripLen2.Checked)
+            if (true == ckBoxStripLen.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_STRIP_LEN;
-            if (true == ckBoxSplay2.Checked)
+            if (true == ckBoxSplay.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_SPLAY;
-            if (true == ckBoxSeal2.Checked)
+            if (true == ckBoxSeal.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_SEAL;
             wire.tol.analEN = (ANAL_TYPE)type;
 
-            wire.tol.sealPosP = Convert.ToSingle(GetNumber(tBoxSealPosP2.Text));		//mm
-            wire.tol.sealPosN = Convert.ToSingle(GetNumber(tBoxSealPosN2.Text));		//mm
-            wire.tol.corePosP = Convert.ToSingle(GetNumber(tBoxCorePosP2.Text));		//mm
-            wire.tol.corePosN = Convert.ToSingle(GetNumber(tBoxCorePosN2.Text));		//mm
-            wire.tol.stripPosP = Convert.ToSingle(GetNumber(tBoxStripPosP2.Text));		//mm
-            wire.tol.stripPosN = Convert.ToSingle(GetNumber(tBoxStripPosN2.Text));		//mm
-            wire.tol.stripLenP = Convert.ToSingle(GetNumber(tBoxStripLenP2.Text));		//mm
-            wire.tol.stripLenN = Convert.ToSingle(GetNumber(tBoxStripLenN2.Text));		//mm
+            wire.tol.sealPosP = Convert.ToSingle(GetNumber(tBoxSealPosP.Text));		//mm
+            wire.tol.sealPosN = Convert.ToSingle(GetNumber(tBoxSealPosN.Text));		//mm
+            wire.tol.corePosP = Convert.ToSingle(GetNumber(tBoxCorePosP.Text));		//mm
+            wire.tol.corePosN = Convert.ToSingle(GetNumber(tBoxCorePosN.Text));		//mm
+            wire.tol.stripPosP = Convert.ToSingle(GetNumber(tBoxStripPosP.Text));		//mm
+            wire.tol.stripPosN = Convert.ToSingle(GetNumber(tBoxStripPosN.Text));		//mm
+            wire.tol.stripLenP = Convert.ToSingle(GetNumber(tBoxStripLenP.Text));		//mm
+            wire.tol.stripLenN = Convert.ToSingle(GetNumber(tBoxStripLenN.Text));		//mm
 
-            wire.tol.sealWidthP = Convert.ToSingle(GetNumber(tBoxSealWidthP2.Text));	//%
-            wire.tol.sealWidthN = Convert.ToSingle(GetNumber(tBoxSealWidthN2.Text));	//%
-            wire.tol.coreWidthP = Convert.ToSingle(GetNumber(tBoxCoreWidthP2.Text));	//%
-            wire.tol.coreWidthN = Convert.ToSingle(GetNumber(tBoxCoreWidthN2.Text));	//%
+            wire.tol.sealWidthP = Convert.ToSingle(GetNumber(tBoxSealWidthP.Text));	//%
+            wire.tol.sealWidthN = Convert.ToSingle(GetNumber(tBoxSealWidthN.Text));	//%
+            wire.tol.coreWidthP = Convert.ToSingle(GetNumber(tBoxCoreWidthP.Text));	//%
+            wire.tol.coreWidthN = Convert.ToSingle(GetNumber(tBoxCoreWidthN.Text));	//%
 
-            wire.tol.wireSplay = Convert.ToSingle(GetNumber(tBoxSprayP2.Text));		    //%
+            wire.tol.wireSplay = Convert.ToSingle(GetNumber(tBoxSprayP.Text));		    //%
 
-            wire.tol.variationFilter = Convert.ToSingle(GetNumber(tBoxVariationFilter2.Text));//mm
-            wire.tol.sealRatio = Convert.ToSingle(GetNumber(tBoxSealRatio2.Text));		//%
-            wire.tol.sealLimit = Convert.ToSingle(GetNumber(tBoxSealLimit2.Text));		//%
-            wire.tol.stripLimit = Convert.ToSingle(GetNumber(tBoxStripLimit2.Text));	//%
+            wire.tol.variationFilter = Convert.ToSingle(GetNumber(tBoxVariationFilter.Text));//mm
+            wire.tol.sealRatio = Convert.ToSingle(GetNumber(tBoxSealRatio.Text));		//%
+            wire.tol.sealLimit = Convert.ToSingle(GetNumber(tBoxSealLimit.Text));		//%
+            wire.tol.stripLimit = Convert.ToSingle(GetNumber(tBoxStripLimit.Text));	//%
             return wire;
         }
 
