@@ -62,6 +62,8 @@ namespace IMG128
 
         }
 
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             string [] ports = SerialPort.GetPortNames();
