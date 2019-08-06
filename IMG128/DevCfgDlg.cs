@@ -155,9 +155,9 @@ namespace IMG128
 
         private void DevCfgDlg_Load(object sender, EventArgs e)
         {
-            xxcsControls.Add(xxcs1);
-            xxcsControls.Add(xxcs1);
-            xxcsControls.Add(xxcs1);
+            xxcsControls.Add(xxcs3);
+            xxcsControls.Add(xxcs3);
+            xxcsControls.Add(xxcs3);
 
             inputControls.Add(new input());
 
@@ -474,13 +474,17 @@ namespace IMG128
             //如果只有一个基准线型，则基准线型2相关设置灰化
             if (cBoxModelNum.Text == "1")
             {
-                gBoxModel2.Enabled = false;
-                gBoxAdvanceModel2.Enabled = false;
+                xxcsControls[1].gBoxModel.Enabled = false;
+                xxcsControls[1].gBoxAdvanceModel.Enabled = false;
+                //gBoxModel2.Enabled = false;
+                //gBoxAdvanceModel2.Enabled = false;
             }
             else
             {
-                gBoxModel2.Enabled = true;
-                gBoxAdvanceModel2.Enabled = false;
+                xxcsControls[1].gBoxModel.Enabled = true;
+                xxcsControls[1].gBoxAdvanceModel.Enabled = false;
+                //gBoxModel2.Enabled = true;
+                //gBoxAdvanceModel2.Enabled = false;
             }
         }
 
