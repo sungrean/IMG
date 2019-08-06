@@ -283,22 +283,51 @@ namespace IMG128
             sb.Append(tmp);
             tmp = string.Format("判定项目   ：{0:X}\r\n", rec.analEN);
             sb.Append(tmp);
-            tmp = string.Format("线端位置   ：最大:{0}  最小:{1}  基准:{2} 检测:{3}\r\n", rec.corePosMax * REC.PIX_SIZE, rec.corePosMin * REC.PIX_SIZE, rec.corePosStd * REC.PIX_SIZE, rec.corePos * REC.PIX_SIZE);
+
+            tmp = string.Format("线端位置   ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
+                Convert.ToSingle(rec.corePosMax * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.corePosMin * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.corePosStd * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.corePos * REC.PIX_SIZE).ToString("0.000"));
             sb.Append(tmp);
-            tmp = string.Format("线径       ：最大:{0}  最小:{1}  基准:{2} 检测:{3}\r\n", rec.coreWidthMax, rec.coreWidthMin, rec.coreWidthStd, rec.coreWidth);
+            tmp = string.Format("线径       ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
+                Convert.ToSingle(rec.coreWidthMax).ToString("0.000"),
+                Convert.ToSingle(rec.coreWidthMin).ToString("0.000"),
+                Convert.ToSingle(rec.coreWidthStd).ToString("0.000"),
+                Convert.ToSingle(rec.coreWidth).ToString("0.000"));
             sb.Append(tmp);
-            tmp = string.Format("防水栓位置 ：最大:{0}  最小:{1}  基准:{2} 检测:{3}\r\n", rec.sealPosMax * REC.PIX_SIZE, rec.sealPosMin * REC.PIX_SIZE, rec.sealPosStd * REC.PIX_SIZE, rec.sealPos * REC.PIX_SIZE);
+            tmp = string.Format("防水栓位置 ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
+                Convert.ToSingle(rec.sealPosMax * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.sealPosMin * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.sealPosStd * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.sealPos * REC.PIX_SIZE).ToString("0.000"));
             sb.Append(tmp);
-            tmp = string.Format("防水栓直径 ：最大:{0}  最小:{1}  基准:{2} 检测:{3}\r\n", rec.sealWidthMax, rec.sealWidthMin, rec.sealWidthStd, rec.sealWidth);
+            tmp = string.Format("防水栓直径 ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
+                Convert.ToSingle(rec.sealWidthMax).ToString("0.000"),
+                Convert.ToSingle(rec.sealWidthMin).ToString("0.000"),
+                Convert.ToSingle(rec.sealWidthStd).ToString("0.000"),
+                Convert.ToSingle(rec.sealWidth).ToString("0.000"));
             sb.Append(tmp);
-            tmp = string.Format("剥切位置   ：最大:{0}  最小:{1}  基准:{2} 检测:{3}\r\n", rec.stripPosMax * REC.PIX_SIZE, rec.stripPosMin * REC.PIX_SIZE, rec.stripPosStd * REC.PIX_SIZE, rec.stripPos * REC.PIX_SIZE);
+            tmp = string.Format("剥切位置   ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
+                Convert.ToSingle(rec.stripPosMax * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.stripPosMin * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.stripPosStd * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.stripPos * REC.PIX_SIZE).ToString("0.000"));
             sb.Append(tmp);
-            tmp = string.Format("剥切长度   ：最大:{0}  最小:{1}  基准:{2} 检测:{3}\r\n", rec.stripLenMax * REC.PIX_SIZE, rec.stripLenMin * REC.PIX_SIZE, rec.stripLenStd * REC.PIX_SIZE, rec.stripLen * REC.PIX_SIZE);
+            tmp = string.Format("剥切长度   ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
+                Convert.ToSingle(rec.stripLenMax * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.stripLenMin * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.stripLenStd * REC.PIX_SIZE).ToString("0.000"),
+                Convert.ToSingle(rec.stripLen * REC.PIX_SIZE).ToString("0.000"));
             sb.Append(tmp);
-            tmp = string.Format("分叉宽度   ：最大:{0}  最小:{1}  基准:{2} 检测:{3}\r\n", rec.splayMax, rec.splayMin, rec.splayStd, rec.splay);
+            tmp = string.Format("分叉宽度   ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
+                Convert.ToSingle(rec.splayMax).ToString("0.000"),
+                Convert.ToSingle(rec.splayMin).ToString("0.000"),
+                Convert.ToSingle(rec.splayStd).ToString("0.000"),
+                Convert.ToSingle(rec.splay).ToString("0.000"));
             sb.Append(tmp);
 
-            if(0 != rec.isSeal)
+            if (0 != rec.isSeal)
                 tmp = string.Format("有无防水栓 ：有\r\n");
             else
                 tmp = string.Format("有无防水栓 ：无\r\n");

@@ -129,7 +129,7 @@ namespace IMG128
     {
 
         const UInt32 CFG_VALID = 0x55AA55AA;
-        const Int32 MAX_MODEL_NUM = 3;         //#define MAX_MODEL_NUM	2	//最多线型数量
+        const Int32 MAX_MODEL_NUM = 2;         //#define MAX_MODEL_NUM	2	//最多线型数量
         const Int32 OUTPUT_NUM = 2;
         const Int32 INPUT_NUM = 4;
 
