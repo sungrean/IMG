@@ -165,6 +165,7 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.rBtnNC2 = new System.Windows.Forms.RadioButton();
             this.rBtnNO2 = new System.Windows.Forms.RadioButton();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.checkBoxOutIgnoreWhileOutActive = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnSetupCCD = new System.Windows.Forms.Button();
@@ -178,6 +179,7 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.xxcs1 = new xxcs();
+            this.output1 = new output();
             this.tabPage2.SuspendLayout();
             this.gBoxAdvanceModel2.SuspendLayout();
             this.gBoxModel2.SuspendLayout();
@@ -199,6 +201,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -1207,6 +1210,7 @@
             // 
             this.tabCtlOut.Controls.Add(this.tabPage3);
             this.tabCtlOut.Controls.Add(this.tabPage4);
+            this.tabCtlOut.Controls.Add(this.tabPage9);
             this.tabCtlOut.Location = new System.Drawing.Point(6, 6);
             this.tabCtlOut.Name = "tabCtlOut";
             this.tabCtlOut.SelectedIndex = 0;
@@ -1626,6 +1630,16 @@
             this.rBtnNO2.Text = "常开";
             this.rBtnNO2.UseVisualStyleBackColor = true;
             // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.output1);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(481, 257);
+            this.tabPage9.TabIndex = 2;
+            this.tabPage9.Text = "输出3";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
             // checkBoxOutIgnoreWhileOutActive
             // 
             this.checkBoxOutIgnoreWhileOutActive.AutoSize = true;
@@ -1780,6 +1794,13 @@
             this.xxcs1.Size = new System.Drawing.Size(468, 349);
             this.xxcs1.TabIndex = 0;
             // 
+            // output1
+            // 
+            this.output1.Location = new System.Drawing.Point(4, 4);
+            this.output1.Name = "output1";
+            this.output1.Size = new System.Drawing.Size(463, 255);
+            this.output1.TabIndex = 0;
+            // 
             // DevCfgDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1833,6 +1854,7 @@
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabControl2.ResumeLayout(false);
@@ -1993,5 +2015,7 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage8;
         private xxcs xxcs1;
+        private System.Windows.Forms.TabPage tabPage9;
+        private output output1;
     }
 }
