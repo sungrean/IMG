@@ -53,7 +53,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.tBoxCorePosP = new System.Windows.Forms.TextBox();
             this.tBoxCorePosN = new System.Windows.Forms.TextBox();
-            this.ckBoxSeal = new System.Windows.Forms.CheckBox();
             this.ckBoxSealWidth = new System.Windows.Forms.CheckBox();
             this.ckBoxSplay = new System.Windows.Forms.CheckBox();
             this.ckBoxCorePos = new System.Windows.Forms.CheckBox();
@@ -61,6 +60,8 @@
             this.ckBoxSealPos = new System.Windows.Forms.CheckBox();
             this.ckBoxStripPos = new System.Windows.Forms.CheckBox();
             this.ckBoxCoreWidth = new System.Windows.Forms.CheckBox();
+            this.ckBoxSealOri = new System.Windows.Forms.CheckBox();
+            this.ckBoxSeal = new System.Windows.Forms.CheckBox();
             this.gBoxAdvanceModel.SuspendLayout();
             this.gBoxModel.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +76,7 @@
             this.gBoxAdvanceModel.Controls.Add(this.label27);
             this.gBoxAdvanceModel.Controls.Add(this.tBoxVariationFilter);
             this.gBoxAdvanceModel.Controls.Add(this.label26);
-            this.gBoxAdvanceModel.Location = new System.Drawing.Point(6, 246);
+            this.gBoxAdvanceModel.Location = new System.Drawing.Point(3, 268);
             this.gBoxAdvanceModel.Name = "gBoxAdvanceModel";
             this.gBoxAdvanceModel.Size = new System.Drawing.Size(456, 99);
             this.gBoxAdvanceModel.TabIndex = 18;
@@ -156,6 +157,8 @@
             // 
             // gBoxModel
             // 
+            this.gBoxModel.Controls.Add(this.ckBoxSealOri);
+            this.gBoxModel.Controls.Add(this.ckBoxSeal);
             this.gBoxModel.Controls.Add(this.tBoxSprayP);
             this.gBoxModel.Controls.Add(this.tBoxStripLenP);
             this.gBoxModel.Controls.Add(this.tBoxStripLenN);
@@ -171,7 +174,6 @@
             this.gBoxModel.Controls.Add(this.label16);
             this.gBoxModel.Controls.Add(this.tBoxCorePosP);
             this.gBoxModel.Controls.Add(this.tBoxCorePosN);
-            this.gBoxModel.Controls.Add(this.ckBoxSeal);
             this.gBoxModel.Controls.Add(this.ckBoxSealWidth);
             this.gBoxModel.Controls.Add(this.ckBoxSplay);
             this.gBoxModel.Controls.Add(this.ckBoxCorePos);
@@ -181,7 +183,7 @@
             this.gBoxModel.Controls.Add(this.ckBoxCoreWidth);
             this.gBoxModel.Location = new System.Drawing.Point(6, 4);
             this.gBoxModel.Name = "gBoxModel";
-            this.gBoxModel.Size = new System.Drawing.Size(456, 235);
+            this.gBoxModel.Size = new System.Drawing.Size(456, 258);
             this.gBoxModel.TabIndex = 17;
             this.gBoxModel.TabStop = false;
             this.gBoxModel.Text = "线型检测参数";
@@ -309,16 +311,6 @@
             this.tBoxCorePosN.TabIndex = 16;
             this.tBoxCorePosN.Text = "2.000mm";
             // 
-            // ckBoxSeal
-            // 
-            this.ckBoxSeal.AutoSize = true;
-            this.ckBoxSeal.Location = new System.Drawing.Point(87, 213);
-            this.ckBoxSeal.Name = "ckBoxSeal";
-            this.ckBoxSeal.Size = new System.Drawing.Size(96, 16);
-            this.ckBoxSeal.TabIndex = 15;
-            this.ckBoxSeal.Text = "确保无防水栓";
-            this.ckBoxSeal.UseVisualStyleBackColor = true;
-            // 
             // ckBoxSealWidth
             // 
             this.ckBoxSealWidth.AutoSize = true;
@@ -332,7 +324,7 @@
             // ckBoxSplay
             // 
             this.ckBoxSplay.AutoSize = true;
-            this.ckBoxSplay.Location = new System.Drawing.Point(87, 191);
+            this.ckBoxSplay.Location = new System.Drawing.Point(87, 188);
             this.ckBoxSplay.Name = "ckBoxSplay";
             this.ckBoxSplay.Size = new System.Drawing.Size(96, 16);
             this.ckBoxSplay.TabIndex = 14;
@@ -354,7 +346,7 @@
             // ckBoxStripLen
             // 
             this.ckBoxStripLen.AutoSize = true;
-            this.ckBoxStripLen.Location = new System.Drawing.Point(87, 167);
+            this.ckBoxStripLen.Location = new System.Drawing.Point(87, 164);
             this.ckBoxStripLen.Name = "ckBoxStripLen";
             this.ckBoxStripLen.Size = new System.Drawing.Size(72, 16);
             this.ckBoxStripLen.TabIndex = 13;
@@ -391,6 +383,28 @@
             this.ckBoxCoreWidth.Text = "线芯直径";
             this.ckBoxCoreWidth.UseVisualStyleBackColor = true;
             // 
+            // ckBoxSealOri
+            // 
+            this.ckBoxSealOri.AutoSize = true;
+            this.ckBoxSealOri.Checked = true;
+            this.ckBoxSealOri.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckBoxSealOri.Location = new System.Drawing.Point(87, 231);
+            this.ckBoxSealOri.Name = "ckBoxSealOri";
+            this.ckBoxSealOri.Size = new System.Drawing.Size(84, 16);
+            this.ckBoxSealOri.TabIndex = 49;
+            this.ckBoxSealOri.Text = "防水栓方向";
+            this.ckBoxSealOri.UseVisualStyleBackColor = true;
+            // 
+            // ckBoxSeal
+            // 
+            this.ckBoxSeal.AutoSize = true;
+            this.ckBoxSeal.Location = new System.Drawing.Point(87, 210);
+            this.ckBoxSeal.Name = "ckBoxSeal";
+            this.ckBoxSeal.Size = new System.Drawing.Size(84, 16);
+            this.ckBoxSeal.TabIndex = 48;
+            this.ckBoxSeal.Text = "有无防水栓";
+            this.ckBoxSeal.UseVisualStyleBackColor = true;
+            // 
             // xxcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -398,7 +412,7 @@
             this.Controls.Add(this.gBoxAdvanceModel);
             this.Controls.Add(this.gBoxModel);
             this.Name = "xxcs";
-            this.Size = new System.Drawing.Size(468, 349);
+            this.Size = new System.Drawing.Size(468, 366);
             this.gBoxAdvanceModel.ResumeLayout(false);
             this.gBoxAdvanceModel.PerformLayout();
             this.gBoxModel.ResumeLayout(false);
@@ -434,7 +448,6 @@
         public System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox tBoxCorePosP;
         public System.Windows.Forms.TextBox tBoxCorePosN;
-        public System.Windows.Forms.CheckBox ckBoxSeal;
         public System.Windows.Forms.CheckBox ckBoxSealWidth;
         public System.Windows.Forms.CheckBox ckBoxSplay;
         public System.Windows.Forms.CheckBox ckBoxCorePos;
@@ -442,5 +455,7 @@
         public System.Windows.Forms.CheckBox ckBoxSealPos;
         public System.Windows.Forms.CheckBox ckBoxStripPos;
         public System.Windows.Forms.CheckBox ckBoxCoreWidth;
+        private System.Windows.Forms.CheckBox ckBoxSealOri;
+        private System.Windows.Forms.CheckBox ckBoxSeal;
     }
 }

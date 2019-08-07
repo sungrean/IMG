@@ -32,7 +32,9 @@ namespace IMG128
             ckBoxStripPos.Checked = tools.IS_ANAL_STRIP_POS(type);
             ckBoxStripLen.Checked = tools.IS_ANAL_STRIP_LEN(type);
             ckBoxSplay.Checked = tools.IS_ANAL_SPLAY(type);
-            ckBoxSeal.Checked = tools.IS_ANAL_SEAL(type);
+            //ckBoxSeal.Checked = tools.IS_ANAL_SEAL(type);
+            ckBoxSeal.Checked = tools.IS_ANAL_IS_SEAL(type);
+            ckBoxSealOri.Checked = tools.IS_ANAL_SEAL_ORI(type);
             //检测参数设置
             tBoxCorePosN.Text = wire.tol.corePosN.ToString() + "mm";
             tBoxCorePosP.Text = wire.tol.corePosP.ToString() + "mm";
@@ -71,8 +73,10 @@ namespace IMG128
                 type |= (UInt32)ANAL_TYPE.ANAL_STRIP_LEN;
             if (true == ckBoxSplay.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_SPLAY;
-            if (true == ckBoxSeal.Checked)
-                type |= (UInt32)ANAL_TYPE.ANAL_SEAL;
+            if (true == ckBoxSeal.Checked)//
+                type |= (UInt32)ANAL_TYPE.ANAL_IS_SEAL;
+            if (true == ckBoxSealOri.Checked)//
+                type |= (UInt32)ANAL_TYPE.ANAL_SEAL_ORI;
             wire.tol.analEN = (ANAL_TYPE)type;
 
             wire.tol.sealPosP = Convert.ToSingle(tools.GetNumber(tBoxSealPosP.Text));		//mm

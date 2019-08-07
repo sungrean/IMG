@@ -33,8 +33,14 @@
             this.btOpenProfile = new System.Windows.Forms.Button();
             this.btSaveProfile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.xxcs2 = new IMG128.xxcs();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.xxcs1 = new IMG128.xxcs();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.input4 = new IMG128.input();
+            this.input3 = new IMG128.input();
+            this.input2 = new IMG128.input();
+            this.input1 = new IMG128.input();
             this.tBoxMinSetupDuration = new System.Windows.Forms.TextBox();
             this.tBoxFiringTimeOut = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -42,9 +48,11 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabCtlOut = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.output1 = new IMG128.output();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.output2 = new IMG128.output();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.output3 = new output();
+            this.output3 = new IMG128.output();
             this.checkBoxOutIgnoreWhileOutActive = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnSetupCCD = new System.Windows.Forms.Button();
@@ -57,15 +65,7 @@
             this.cBoxModelNum = new System.Windows.Forms.ComboBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.xxcs3 = new  xxcs();
-            this.xxcs1 = new  xxcs();
-            this.xxcs2 = new  xxcs();
-            this.input1 = new  input();
-            this.input2 = new  input();
-            this.input3 = new  input();
-            this.input4 = new  input();
-            this.output1 = new  output();
-            this.output2 = new  output();
+            this.xxcs3 = new IMG128.xxcs();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage7.SuspendLayout();
@@ -127,6 +127,13 @@
             this.tabPage2.Text = "线型参数2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // xxcs2
+            // 
+            this.xxcs2.Location = new System.Drawing.Point(6, 6);
+            this.xxcs2.Name = "xxcs2";
+            this.xxcs2.Size = new System.Drawing.Size(468, 349);
+            this.xxcs2.TabIndex = 0;
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.xxcs1);
@@ -137,6 +144,13 @@
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "线型参数1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // xxcs1
+            // 
+            this.xxcs1.Location = new System.Drawing.Point(6, 6);
+            this.xxcs1.Name = "xxcs1";
+            this.xxcs1.Size = new System.Drawing.Size(468, 349);
+            this.xxcs1.TabIndex = 0;
             // 
             // tabPage7
             // 
@@ -155,6 +169,34 @@
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "输入";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // input4
+            // 
+            this.input4.Location = new System.Drawing.Point(282, 153);
+            this.input4.Name = "input4";
+            this.input4.Size = new System.Drawing.Size(216, 97);
+            this.input4.TabIndex = 39;
+            // 
+            // input3
+            // 
+            this.input3.Location = new System.Drawing.Point(6, 153);
+            this.input3.Name = "input3";
+            this.input3.Size = new System.Drawing.Size(216, 97);
+            this.input3.TabIndex = 38;
+            // 
+            // input2
+            // 
+            this.input2.Location = new System.Drawing.Point(282, 50);
+            this.input2.Name = "input2";
+            this.input2.Size = new System.Drawing.Size(216, 97);
+            this.input2.TabIndex = 37;
+            // 
+            // input1
+            // 
+            this.input1.Location = new System.Drawing.Point(6, 50);
+            this.input1.Name = "input1";
+            this.input1.Size = new System.Drawing.Size(216, 97);
+            this.input1.TabIndex = 36;
             // 
             // tBoxMinSetupDuration
             // 
@@ -224,6 +266,13 @@
             this.tabPage3.Text = "输出1";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // output1
+            // 
+            this.output1.Location = new System.Drawing.Point(6, 6);
+            this.output1.Name = "output1";
+            this.output1.Size = new System.Drawing.Size(463, 255);
+            this.output1.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.output2);
@@ -234,6 +283,13 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "输出2";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // output2
+            // 
+            this.output2.Location = new System.Drawing.Point(6, 6);
+            this.output2.Name = "output2";
+            this.output2.Size = new System.Drawing.Size(463, 255);
+            this.output2.TabIndex = 0;
             // 
             // tabPage9
             // 
@@ -401,66 +457,10 @@
             // 
             // xxcs3
             // 
-            this.xxcs3.Location = new System.Drawing.Point(17, 6);
+            this.xxcs3.Location = new System.Drawing.Point(6, 6);
             this.xxcs3.Name = "xxcs3";
             this.xxcs3.Size = new System.Drawing.Size(468, 349);
             this.xxcs3.TabIndex = 0;
-            // 
-            // xxcs1
-            // 
-            this.xxcs1.Location = new System.Drawing.Point(6, 6);
-            this.xxcs1.Name = "xxcs1";
-            this.xxcs1.Size = new System.Drawing.Size(468, 349);
-            this.xxcs1.TabIndex = 0;
-            // 
-            // xxcs2
-            // 
-            this.xxcs2.Location = new System.Drawing.Point(6, 6);
-            this.xxcs2.Name = "xxcs2";
-            this.xxcs2.Size = new System.Drawing.Size(468, 349);
-            this.xxcs2.TabIndex = 0;
-            // 
-            // input1
-            // 
-            this.input1.Location = new System.Drawing.Point(6, 50);
-            this.input1.Name = "input1";
-            this.input1.Size = new System.Drawing.Size(216, 97);
-            this.input1.TabIndex = 36;
-            // 
-            // input2
-            // 
-            this.input2.Location = new System.Drawing.Point(282, 50);
-            this.input2.Name = "input2";
-            this.input2.Size = new System.Drawing.Size(216, 97);
-            this.input2.TabIndex = 37;
-            // 
-            // input3
-            // 
-            this.input3.Location = new System.Drawing.Point(6, 153);
-            this.input3.Name = "input3";
-            this.input3.Size = new System.Drawing.Size(216, 97);
-            this.input3.TabIndex = 38;
-            // 
-            // input4
-            // 
-            this.input4.Location = new System.Drawing.Point(282, 153);
-            this.input4.Name = "input4";
-            this.input4.Size = new System.Drawing.Size(216, 97);
-            this.input4.TabIndex = 39;
-            // 
-            // output1
-            // 
-            this.output1.Location = new System.Drawing.Point(6, 6);
-            this.output1.Name = "output1";
-            this.output1.Size = new System.Drawing.Size(463, 255);
-            this.output1.TabIndex = 0;
-            // 
-            // output2
-            // 
-            this.output2.Location = new System.Drawing.Point(6, 6);
-            this.output2.Name = "output2";
-            this.output2.Size = new System.Drawing.Size(463, 255);
-            this.output2.TabIndex = 0;
             // 
             // DevCfgDlg
             // 

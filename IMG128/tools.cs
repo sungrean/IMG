@@ -72,7 +72,8 @@ namespace IMG128
         public static bool IS_ANAL_STRIP_POS(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_STRIP_POS == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_STRIP_POS); }
         public static bool IS_ANAL_STRIP_LEN(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_STRIP_LEN == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_STRIP_LEN); }
         public static bool IS_ANAL_SPLAY(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SPLAY == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SPLAY); }
-        public static bool IS_ANAL_SEAL(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SEAL == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SEAL); }
+        public static bool IS_ANAL_IS_SEAL(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_IS_SEAL == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_IS_SEAL); }       //是否有防水栓
+        public static bool IS_ANAL_SEAL_ORI(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SEAL_ORI == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SEAL_ORI); }    //防水栓方向
         #endregion
     }
 }

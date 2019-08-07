@@ -27,7 +27,8 @@ public enum ANAL_TYPE
     ANAL_STRIP_POS = 0x0010,	//剥切位置异常
     ANAL_STRIP_LEN = 0x0020,	//剥切长度异常
     ANAL_SPLAY = 0x0040,	//分叉异常
-    ANAL_SEAL = 0x0080,	//发现防水栓
+    ANAL_IS_SEAL = 0x0080,	//有无防水栓
+    ANAL_SEAL_ORI = 0x0100, //防水栓方向
     ANAL_INVALID_IMG = 0x8000	//无效图像
 } ;
 //output mode define
@@ -155,13 +156,18 @@ namespace IMG128
 
         private void DevCfgDlg_Load(object sender, EventArgs e)
         {
-            xxcsControls.Add(xxcs3);
-            xxcsControls.Add(xxcs3);
+            xxcsControls.Add(xxcs1);
+            xxcsControls.Add(xxcs2);
             xxcsControls.Add(xxcs3);
 
-            inputControls.Add(new input());
+            inputControls.Add(input1);
+            inputControls.Add(input2);
+            inputControls.Add(input3);
+            inputControls.Add(input4);
 
-            outputControls.Add(new output());
+            outputControls.Add(output1);
+            outputControls.Add(output2);
+            outputControls.Add(output3);
 
         }
 
