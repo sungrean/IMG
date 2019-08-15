@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-//线型定义
+//线型定义11
 //#define MAX_MODEL_NUM	2	//最多线型数量
 
 //输入信号定义
@@ -31,6 +31,10 @@ public enum ANAL_TYPE
     ANAL_SEAL_ORI = 0x0100, //防水栓方向
     ANAL_INVALID_IMG = 0x8000	//无效图像
 } ;
+
+
+
+
 //output mode define
 public enum TYPE_OUTPUT
 {
@@ -134,10 +138,6 @@ namespace IMG128
         const Int32 OUTPUT_NUM = 2;
         const Int32 INPUT_NUM = 4;
 
-        List<xxcs> xxcsControls = new List<xxcs>();                     //添加线型参数、输入、输出的控件数组。
-        List<input> inputControls = new List<input>();
-        List<output> outputControls = new List<output>();
-
         //bool isLoadDevCfg = false;              //是否从设备读取过配置信息
         //public static CFG_T _cfg = new CFG_T();
         IMG128 hParent;
@@ -156,22 +156,40 @@ namespace IMG128
 
         private void DevCfgDlg_Load(object sender, EventArgs e)
         {
-            xxcsControls.Add(xxcs1);
-            xxcsControls.Add(xxcs2);
-            xxcsControls.Add(xxcs3);
-
-            inputControls.Add(input1);
-            inputControls.Add(input2);
-            inputControls.Add(input3);
-            inputControls.Add(input4);
-
-            outputControls.Add(output1);
-            outputControls.Add(output2);
-            outputControls.Add(output3);
-
+            
         }
 
 
+
+        //获取输出引脚属性
+        public bool IS_OUTPUT_NO(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_NO == (TYPE_OUTPUT)((UInt32)outputMode & 0x0001); }
+        public bool IS_OUTPUT_NC(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_NC == (TYPE_OUTPUT)((UInt32)outputMode & 0x0001); }
+        public bool IS_OUTPUT_PASS(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_PASS == (TYPE_OUTPUT)((UInt32)outputMode & (UInt32)TYPE_OUTPUT.OUTPUT_PASS); }
+        public bool IS_OUTPUT_FAIL(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_FAIL == (TYPE_OUTPUT)((UInt32)outputMode & (UInt32)TYPE_OUTPUT.OUTPUT_FAIL); }
+        public bool IS_OUTPUT_ANY(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_ANY == (TYPE_OUTPUT)((UInt32)outputMode & (UInt32)TYPE_OUTPUT.OUTPUT_ANY); }
+        public bool IS_OUTPUT_ING_FIRST(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_IGN_FIRST == (TYPE_OUTPUT)((UInt32)outputMode & (UInt32)TYPE_OUTPUT.OUTPUT_IGN_FIRST); }
+        public bool IS_OUTPUT_ING_LEARN(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_IGN_LEARN == (TYPE_OUTPUT)((UInt32)outputMode & (UInt32)TYPE_OUTPUT.OUTPUT_IGN_LEARN); }
+        public bool IS_OUTPUT_SEN_EN(TYPE_OUTPUT outputMode) { return TYPE_OUTPUT.OUTPUT_SEN_EN == (TYPE_OUTPUT)((UInt32)outputMode & (UInt32)TYPE_OUTPUT.OUTPUT_SEN_EN); }
+
+        //获取输入引脚属性
+        public bool IS_INPUT_EDGE(TYPE_INPUT input) { return 0 == ((UInt32)input & (UInt32)TYPE_INPUT.INPUT_TRIG); }
+        public bool IS_INPUT_LEVEL(TYPE_INPUT input) { return TYPE_INPUT.INPUT_TRIG == (TYPE_INPUT)((UInt32)input & (UInt32)TYPE_INPUT.INPUT_TRIG); }
+        public bool IS_INPUT_LEARN(TYPE_INPUT input) { return TYPE_INPUT.INPUT_LEARN == (TYPE_INPUT)((UInt32)input & 0x0006); }
+        public bool IS_INPUT_FIRING(TYPE_INPUT input) { return TYPE_INPUT.INPUT_FIRING == (TYPE_INPUT)((UInt32)input & 0x0006); }
+        public bool IS_INPUT_SETUP(TYPE_INPUT input) { return TYPE_INPUT.INPUT_SETUP == (TYPE_INPUT)((UInt32)input & 0x0006); }
+        public bool IS_INPPUT_POS(TYPE_INPUT input) { return TYPE_INPUT.INPUT_POS == (TYPE_INPUT)((UInt32)input & (UInt32)TYPE_INPUT.INPUT_POS); }
+        public bool IS_INPPUT_NEG(TYPE_INPUT input) { return TYPE_INPUT.INPUT_NEG == (TYPE_INPUT)((UInt32)input & (UInt32)TYPE_INPUT.INPUT_NEG); }
+
+        //获取检测模式
+        public bool IS_ANAL_CORE_POS(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_CORE_POS == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_CORE_POS);}
+        public bool IS_ANAL_CORE_WIDTH(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_CORE_WIDTH == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_CORE_WIDTH); }
+        public bool IS_ANAL_SEAL_POS(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SEAL_POS == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SEAL_POS); }
+        public bool IS_ANAL_SEAL_WIDTH(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SEAL_WIDTH == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SEAL_WIDTH); }
+        public bool IS_ANAL_STRIP_POS(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_STRIP_POS == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_STRIP_POS); }
+        public bool IS_ANAL_STRIP_LEN(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_STRIP_LEN == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_STRIP_LEN); }
+        public bool IS_ANAL_SPLAY(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SPLAY == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SPLAY); }
+        public bool IS_ANAL_IS_SEAL(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_IS_SEAL == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_IS_SEAL); }       //是否有防水栓
+        public bool IS_ANAL_SEAL_ORI(ANAL_TYPE type) { return (UInt32)ANAL_TYPE.ANAL_SEAL_ORI == ((UInt32)type & (UInt32)ANAL_TYPE.ANAL_SEAL_ORI); }    //防水栓方向
 
         /*********************************************************************************************************
             检验参数有效性。如果参数无效，设为默认参数
@@ -230,9 +248,9 @@ namespace IMG128
                 cfg.wire[i].tol.wireSplay = CFG_CheckVal(cfg.wire[i].tol.wireSplay, (float)50.0, (float)5.0, (float)1000.0);		//%
 
                 cfg.wire[i].tol.variationFilter = CFG_CheckVal(cfg.wire[i].tol.variationFilter, (float)1.25, (float)0.0, (float)10.0);//mm
-                cfg.wire[i].tol.sealRatio = CFG_CheckVal(cfg.wire[i].tol.sealRatio, (float)85.0, (float)2.0, (float)200.0);			//%
-                cfg.wire[i].tol.sealLimit = CFG_CheckVal(cfg.wire[i].tol.sealLimit, (float)5.0, (float)2.0, (float)100.0);			//%
-                cfg.wire[i].tol.stripLimit = CFG_CheckVal(cfg.wire[i].tol.stripLimit, (float)15.0, (float)5.0, (float)100.0);		//%
+                cfg.wire[i].tol.sealRatio = CFG_CheckVal(cfg.wire[i].tol.sealRatio, (float)85.0, (float)2.0, (float)500.0);			//%
+                cfg.wire[i].tol.sealLimit = CFG_CheckVal(cfg.wire[i].tol.sealLimit, (float)5.0, (float)2.0, (float)800.0);			//%
+                cfg.wire[i].tol.stripLimit = CFG_CheckVal(cfg.wire[i].tol.stripLimit, (float)15.0, (float)5.0, (float)800.0);		//%
             }
 
             //输出
@@ -249,7 +267,7 @@ namespace IMG128
             cfg.firingTimeOut = CFG_CheckVal(cfg.firingTimeOut, 500, 10, 60000);						//触发信号超时设置
             cfg.minSetupDuration = CFG_CheckVal(cfg.minSetupDuration, 4000, 4000, 60000);				//进入setup模式前，输入信号有效的最小持续时间，用于在没有上位机时手动操作进入学习模式
 
-            cfg.senThresh = CFG_CheckVal(cfg.senThresh, 10, 5, 95);	//CCD sensor threshold	%
+            cfg.senThresh = CFG_CheckVal(cfg.senThresh, 500, 5, 4000);	//CCD sensor threshold
             cfg.learnNum = CFG_CheckVal(cfg.learnNum, 1, 1, 16);		//学习模式个数 1～16次 初值：1  设置在学习时以几根良品的波形平均值作为基准波形。
             return true;
         }
@@ -262,30 +280,20 @@ namespace IMG128
             //如果只有一个基准线型，则基准线型2相关设置灰化
             if (cBoxModelNum.Text == "1")
             {
-               // gBoxModel2.Enabled = false;
-               // gBoxAdvanceModel2.Enabled = false;
-
-                xxcsControls[1].gBoxModel.Enabled = false;
-                xxcsControls[1].gBoxAdvanceModel.Enabled = false;
+                gBoxModel2.Enabled = false;
+                gBoxAdvanceModel2.Enabled = false;
             }
             else
             {
-                //gBoxModel2.Enabled = true;
-                //gBoxAdvanceModel2.Enabled = false;
-
-                xxcsControls[1].gBoxModel.Enabled = true;
-                xxcsControls[1].gBoxAdvanceModel.Enabled = false;
+                gBoxModel2.Enabled = true;
+                gBoxAdvanceModel2.Enabled = false;
             }
             
             ckBoxAutoAdjSpeed.Checked = (cfg.isSpeedAdj != 0);      //速度补偿
             cBoxLearnNum.Text = cfg.learnNum.ToString();            //学习数量
             tBoxSensorSensitivity.Text = cfg.senThresh.ToString();  //传感器灵敏度%
-            for(int i=0;i< cfg.wire.Count(); i++)
-            {
-                xxcsControls[i].ShowWIRE_SETTING(cfg.wire[i]);          //调用控件的显示方法进行显示
-            }
-            #region 下面使用默认方法修改控件值，
-            /*
+
+
             //检测模式
             ANAL_TYPE type = cfg.wire[0].tol.analEN;
             ckBoxCorePos1.Checked = IS_ANAL_CORE_POS(type);
@@ -295,24 +303,8 @@ namespace IMG128
             ckBoxStripPos1.Checked = IS_ANAL_STRIP_POS(type);
             ckBoxStripLen1.Checked = IS_ANAL_STRIP_LEN(type);
             ckBoxSplay1.Checked = IS_ANAL_SPLAY(type);
-            ckBoxSeal1.Checked = IS_ANAL_SEAL(type);
-            //检测参数设置
-            tBoxCorePosN1.Text = cfg.wire[0].tol.corePosN.ToString() + "mm";
-            tBoxCorePosP1.Text = cfg.wire[0].tol.corePosP.ToString() + "mm";
-            tBoxSealPosN1.Text = cfg.wire[0].tol.sealPosN.ToString() + "mm";
-            tBoxSealPosP1.Text = cfg.wire[0].tol.sealPosP.ToString() + "mm";
-            tBoxStripPosN1.Text = cfg.wire[0].tol.stripPosN.ToString() + "mm";
-            tBoxStripPosP1.Text = cfg.wire[0].tol.stripPosP.ToString() + "mm";
-            tBoxStripLenN1.Text = cfg.wire[0].tol.stripLenN.ToString() + "mm";
-            tBoxStripLenP1.Text = cfg.wire[0].tol.stripLenP.ToString() + "mm";
-            tBoxCoreWidthN1.Text = cfg.wire[0].tol.coreWidthN.ToString() + "%";
-            tBoxCoreWidthP1.Text = cfg.wire[0].tol.coreWidthP.ToString() + "%";
-            tBoxSealWidthN1.Text = cfg.wire[0].tol.sealWidthN.ToString() + "%";
-            tBoxSealWidthP1.Text = cfg.wire[0].tol.sealWidthP.ToString() + "%";
-            tBoxVariationFilter1.Text = cfg.wire[0].tol.variationFilter.ToString() + "mm";
-            tBoxSealLimit1.Text = cfg.wire[0].tol.sealLimit.ToString() + "%";
-            tBoxStripLimit1.Text = cfg.wire[0].tol.stripLimit.ToString() + "%";
-            tBoxSealRatio1.Text = cfg.wire[0].tol.sealRatio.ToString() + "%";
+            ckBoxSeal1.Checked = IS_ANAL_IS_SEAL(type);
+            ckBoxSealOri1.Checked = IS_ANAL_SEAL_ORI(type);
 
             type = cfg.wire[1].tol.analEN;
             ckBoxCorePos2.Checked = IS_ANAL_CORE_POS(type);
@@ -322,113 +314,116 @@ namespace IMG128
             ckBoxStripPos2.Checked = IS_ANAL_STRIP_POS(type);
             ckBoxStripLen2.Checked = IS_ANAL_STRIP_LEN(type);
             ckBoxSplay2.Checked = IS_ANAL_SPLAY(type);
-            ckBoxSeal2.Checked = IS_ANAL_SEAL(type);
+            ckBoxSeal2.Checked = IS_ANAL_IS_SEAL(type);
+            ckBoxSealOri2.Checked = IS_ANAL_SEAL_ORI(type);
 
+            //检测参数设置
+            tBoxCorePosN1.Text = cfg.wire[0].tol.corePosN.ToString() + "mm";
             tBoxCorePosN2.Text = cfg.wire[1].tol.corePosN.ToString() + "mm";
+            tBoxCorePosP1.Text = cfg.wire[0].tol.corePosP.ToString() + "mm";
             tBoxCorePosP2.Text = cfg.wire[1].tol.corePosP.ToString() + "mm";
             
+            tBoxSealPosN1.Text = cfg.wire[0].tol.sealPosN.ToString() + "mm";
             tBoxSealPosN2.Text = cfg.wire[1].tol.sealPosN.ToString() + "mm";
+            tBoxSealPosP1.Text = cfg.wire[0].tol.sealPosP.ToString() + "mm";
             tBoxSealPosP2.Text = cfg.wire[1].tol.sealPosP.ToString() + "mm";
             
+            tBoxStripPosN1.Text = cfg.wire[0].tol.stripPosN.ToString() + "mm";
             tBoxStripPosN2.Text = cfg.wire[1].tol.stripPosN.ToString() + "mm";
+            tBoxStripPosP1.Text = cfg.wire[0].tol.stripPosP.ToString() + "mm";
             tBoxStripPosP2.Text = cfg.wire[1].tol.stripPosP.ToString() + "mm";
             
+            tBoxStripLenN1.Text = cfg.wire[0].tol.stripLenN.ToString() + "mm";
             tBoxStripLenN2.Text = cfg.wire[1].tol.stripLenN.ToString() + "mm";
+            tBoxStripLenP1.Text = cfg.wire[0].tol.stripLenP.ToString() + "mm";
             tBoxStripLenP2.Text = cfg.wire[1].tol.stripLenP.ToString() + "mm";
 
+            tBoxCoreWidthN1.Text = cfg.wire[0].tol.coreWidthN.ToString() + "%";
             tBoxCoreWidthN2.Text = cfg.wire[1].tol.coreWidthN.ToString() + "%";
+            tBoxCoreWidthP1.Text = cfg.wire[0].tol.coreWidthP.ToString() + "%";
             tBoxCoreWidthP2.Text = cfg.wire[1].tol.coreWidthP.ToString() + "%";
 
+            tBoxSealWidthN1.Text = cfg.wire[0].tol.sealWidthN.ToString() + "%";
             tBoxSealWidthN2.Text = cfg.wire[1].tol.sealWidthN.ToString() + "%";
+            tBoxSealWidthP1.Text = cfg.wire[0].tol.sealWidthP.ToString() + "%";
             tBoxSealWidthP2.Text = cfg.wire[1].tol.sealWidthP.ToString() + "%";
 
+            tBoxVariationFilter1.Text = cfg.wire[0].tol.variationFilter.ToString() + "mm";
             tBoxVariationFilter2.Text = cfg.wire[1].tol.variationFilter.ToString() + "mm";
-            tBoxSealLimit2.Text = cfg.wire[1].tol.sealLimit.ToString() + "%";
-            tBoxStripLimit2.Text = cfg.wire[1].tol.stripLimit.ToString() + "%";
-            tBoxSealRatio2.Text = cfg.wire[1].tol.sealRatio.ToString() + "%";
-            */
-            #endregion
+            tBoxSealLimit1.Text = cfg.wire[0].tol.sealLimit.ToString();
+            tBoxSealLimit2.Text = cfg.wire[1].tol.sealLimit.ToString();
+            tBoxStripLimit1.Text = cfg.wire[0].tol.stripLimit.ToString();
+            tBoxStripLimit2.Text = cfg.wire[1].tol.stripLimit.ToString();
+            tBoxSealRatio1.Text = cfg.wire[0].tol.sealRatio.ToString();
+            tBoxSealRatio2.Text = cfg.wire[1].tol.sealRatio.ToString();
+
             //输入 怎样使用控件数组防止代码拷贝？
-            for(int i=0;i<cfg.inputMode.Count();i++)
-            {
-                TYPE_INPUT inputs = cfg.inputMode[i];
-                inputControls[i].updateShow(inputs);
-            }
-            #region  下面使用默认方法修改控件值，
-            /*
             TYPE_INPUT input = cfg.inputMode[0];
-            if (tools.IS_INPUT_LEARN(input))
+            if (IS_INPUT_LEARN(input))
                 cBoxInputModeLvl1.Text = "进入学习模式";
-            else if (tools.IS_INPUT_FIRING(input))
+            else if (IS_INPUT_FIRING(input))
                 cBoxInputModeLvl1.Text = "触发采样";
-            else if (tools.IS_INPUT_SETUP(input))
+            else if (IS_INPUT_SETUP(input))
                 cBoxInputModeLvl1.Text = "进入设置模式";
-            if (tools.IS_INPPUT_POS(input))
+            if (IS_INPPUT_POS(input))
                 cBoxInputPolLvl1.Text = "上升沿触发";
             else
                 cBoxInputPolLvl1.Text = "下降沿触发";
             
 
             input = cfg.inputMode[1];
-            if (tools.IS_INPUT_LEARN(input))
+            if (IS_INPUT_LEARN(input))
                 cBoxInputModeLvl2.Text = "进入学习模式";
-            else if (tools.IS_INPUT_FIRING(input))
+            else if (IS_INPUT_FIRING(input))
                 cBoxInputModeLvl2.Text = "触发采样";
-            else if (tools.IS_INPUT_SETUP(input))
+            else if (IS_INPUT_SETUP(input))
                 cBoxInputModeLvl2.Text = "进入设置模式";
-            if (tools.IS_INPPUT_POS(input))
+            if (IS_INPPUT_POS(input))
                 cBoxInputPolLvl2.Text = "上升沿触发";
             else
                 cBoxInputPolLvl2.Text = "下降沿触发";
             
             input = cfg.inputMode[2];
-            if ( tools.IS_INPUT_LEARN(input))
+            if (IS_INPUT_LEARN(input))
                 cBoxInputModeLvl3.Text = "进入学习模式";
-            else if (tools.IS_INPUT_FIRING(input))
+            else if (IS_INPUT_FIRING(input))
                 cBoxInputModeLvl3.Text = "触发采样";
-            else if (tools.IS_INPUT_SETUP(input))
+            else if (IS_INPUT_SETUP(input))
                 cBoxInputModeLvl3.Text = "进入设置模式";
-            if (tools.IS_INPPUT_POS(input))
+            if (IS_INPPUT_POS(input))
                 cBoxInputPolLvl3.Text = "上升沿触发";
             else
                 cBoxInputPolLvl3.Text = "下降沿触发";
             
             input = cfg.inputMode[3];
-            if (tools.IS_INPUT_LEARN(input))
+            if (IS_INPUT_LEARN(input))
                 cBoxInputModeLvl4.Text = "进入学习模式";
-            else if (tools.IS_INPUT_FIRING(input))
+            else if (IS_INPUT_FIRING(input))
                 cBoxInputModeLvl4.Text = "触发采样";
-            else if (tools.IS_INPUT_SETUP(input))
+            else if (IS_INPUT_SETUP(input))
                 cBoxInputModeLvl4.Text = "进入设置模式";
-            if (tools.IS_INPPUT_POS(input))
+            if (IS_INPPUT_POS(input))
                 cBoxInputPolLvl4.Text = "上升沿触发";
             else
                 cBoxInputPolLvl4.Text = "下降沿触发";
-            */
-            #endregion
-            //输出 
-            for (int i = 0; i < cfg.outputMode.Count(); i++)
-            {
-                TYPE_OUTPUT outputs = cfg.outputMode[i];
-                outputControls[i].updateShow(cfg);
-            }
 
-            #region 下面使用默认方法修改控件值，
-            /*
+            //输出
             TYPE_OUTPUT output = cfg.outputMode[0];
-            if (tools.IS_OUTPUT_NO(output))
+            if (IS_OUTPUT_NO(output))
                 rBtnNO1.Checked = true;
             else
-                rBtnNC1.Checked = true;            
-            if (tools.IS_OUTPUT_ANY(output))
+                rBtnNC1.Checked = true;
+            
+            if (IS_OUTPUT_ANY(output))
                 cBoxOutMode1.Text = "合格/不良品都输出脉冲";
-            else if (tools.IS_OUTPUT_PASS(output))
+            else if (IS_OUTPUT_PASS(output))
                 cBoxOutMode1.Text = "合格品输出脉冲";
-            else if (tools.IS_OUTPUT_FAIL(output))
-                cBoxOutMode1.Text = "不良品输出脉冲";            
-            if (tools.IS_OUTPUT_ING_FIRST(output))
+            else if (IS_OUTPUT_FAIL(output))
+                cBoxOutMode1.Text = "不良品输出脉冲";
+            
+            if (IS_OUTPUT_ING_FIRST(output))
                 rBtnIgnoreFirst1.Checked = true;
-            else if (tools.IS_OUTPUT_ING_LEARN(output))
+            else if (IS_OUTPUT_ING_LEARN(output))
                 rBtnIgnoreLearn1.Checked = true;
             else
                 rBtnNormal1.Checked = true;
@@ -436,26 +431,27 @@ namespace IMG128
             tBoxDuration1.Text = cfg.outputWidth[0].ToString();
 
             output = cfg.outputMode[1];
-            if (tools.IS_OUTPUT_NO(output))
+            if (IS_OUTPUT_NO(output))
                 rBtnNO2.Checked = true;
             else
                 rBtnNC2.Checked = true;
-            if (tools.IS_OUTPUT_PASS(output))
+
+            if (IS_OUTPUT_PASS(output))
                 cBoxOutMode2.Text = "合格品输出脉冲";
-            else if (tools.IS_OUTPUT_FAIL(output))
+            else if (IS_OUTPUT_FAIL(output))
                 cBoxOutMode2.Text = "不良品输出脉冲";
-            else if (tools.IS_OUTPUT_ANY(output))
+            else if (IS_OUTPUT_ANY(output))
                 cBoxOutMode2.Text = "合格/不良品都输出脉冲";
-            if (tools.IS_OUTPUT_ING_FIRST(output))
+
+            if (IS_OUTPUT_ING_FIRST(output))
                 rBtnIgnoreFirst2.Checked = true;
-            else if (tools.IS_OUTPUT_ING_LEARN(output))
+            else if (IS_OUTPUT_ING_LEARN(output))
                 rBtnIgnoreLearn2.Checked = true;
             else
                 rBtnNormal2.Checked = true;
             tBoxOutDelay2.Text = cfg.outputDelay[1].ToString();
             tBoxDuration2.Text = cfg.outputWidth[1].ToString();
-            */
-            #endregion
+
             //输出有效期间忽略输入（忽略返程阶段）
             checkBoxOutIgnoreWhileOutActive.Checked = (cfg.isIgnInWhenOut != 0);
         }
@@ -465,7 +461,7 @@ namespace IMG128
         {
             CFG_T cfg = new CFG_T();
 
-            cfg = (CFG_T)tools.BytesToStruct(frame.data, Marshal.SizeOf(typeof(CFG_T)), typeof(CFG_T));
+            cfg = (CFG_T)BytesToStruct(frame.data, Marshal.SizeOf(typeof(CFG_T)), typeof(CFG_T));
 
             if (CfgCheck(ref cfg))
             {
@@ -473,24 +469,71 @@ namespace IMG128
                 UpdateShow(cfg);
             }
         }
+        public void SensorFrameDeal(COMM_FRAME_T frame)
+        {
+            UInt16[] line = new UInt16[REC.PIX_NUM];
+            
+            int i;
 
+            //这里怎样通过内存拷贝实现以下功能？？
+            for(i = 0; i < REC.PIX_NUM; i++)
+            {
+                line[i] = (UInt16)frame.data[2*i];
+                line[i] += (UInt16)((UInt16)frame.data[2*i+1] * (UInt16)256);
+            }
+
+            Graphics grfx = pBoxSen.CreateGraphics();
+            int picWidth = pBoxSen.Size.Width;
+            int picHeight = pBoxSen.Size.Height;
+
+            const int SENSOR_RANGE = 1024;  //传感器输出最大值
+
+            int X_SCALE = picWidth / REC.PIX_NUM;// 3;
+            int Y_SCALE = SENSOR_RANGE / picHeight;// 4;
+            
+            Pen pen = new Pen(Color.Blue, 1);
+
+            Point[] pts = new Point[REC.PIX_NUM+1];
+            pts[0] = new Point(0, 0);
+            for (i = 0; i < REC.PIX_NUM; i++)
+            {
+                pts[i+1].X = (i+1) * X_SCALE;
+                pts[i+1].Y = picHeight - line[i] / Y_SCALE;
+            }
+            grfx.Clear(Color.White);
+            grfx.DrawLines(pen, pts);
+            
+            grfx.Dispose();
+
+
+            //byte[] line = new byte[sizeof(UInt16 )* REC.PIX_NUM];
+            ////line = (UInt16[])BytesToStruct(frame.data, sizeof(UInt16) * REC.PIX_NUM, typeof(UInt16 []));
+            //Copy(frame.data, 0, line, sizeof(UInt16) * REC.PIX_NUM;
+        }
+
+        //BytesToStruct
+        public object BytesToStruct(byte[] buf, int len, Type type)
+        {
+            object rtn;
+            IntPtr buffer = Marshal.AllocHGlobal(len);
+            Marshal.Copy(buf, 0, buffer, len);
+            rtn = Marshal.PtrToStructure(buffer, type);
+            Marshal.FreeHGlobal(buffer);
+            return rtn;
+        }
 
         private void cBoxModelNum_SelectedIndexChanged(object sender, EventArgs e)
         {
             //如果只有一个基准线型，则基准线型2相关设置灰化
             if (cBoxModelNum.Text == "1")
             {
-                xxcsControls[1].gBoxModel.Enabled = false;
-                xxcsControls[1].gBoxAdvanceModel.Enabled = false;
-                //gBoxModel2.Enabled = false;
-                //gBoxAdvanceModel2.Enabled = false;
+                gBoxModel2.Enabled = false;
+                gBoxAdvanceModel2.Enabled = false;
             }
             else
             {
-                xxcsControls[1].gBoxModel.Enabled = true;
-                xxcsControls[1].gBoxAdvanceModel.Enabled = false;
-                //gBoxModel2.Enabled = true;
-                //gBoxAdvanceModel2.Enabled = false;
+                gBoxModel2.Enabled = true;
+                gBoxAdvanceModel2.Enabled = false;
             }
         }
 
@@ -524,8 +567,8 @@ namespace IMG128
 
                 wire[i].tol.variationFilter = 1.25f;//mm
                 wire[i].tol.sealRatio = 85.0f;		//%
-                wire[i].tol.sealLimit = 5.0f;		//%
-                wire[i].tol.stripLimit = 15.0f;		//%
+                wire[i].tol.sealLimit = 100.0f;		//%
+                wire[i].tol.stripLimit = 50.0f;		//%
             }
 
             //输出
@@ -554,6 +597,20 @@ namespace IMG128
             cfg.valid = CFG_VALID;	//设置配置有效标识
         }
 
+        //提取字符串中前部数字部分
+        private string GetNumber(string str)
+        {
+            int len = str.Length;
+            int i;
+            for (i = 0; i < len; i++)
+                if (((str[i] < '0') || (str[i] > '9')) && (str[i] != '.'))
+                    break;
+            if (i > 0)
+                str = str.Substring(0, i);
+            else
+                str = "0";
+            return str;
+        }
         public CFG_T alloc_CFG_T()
         {
             CFG_T cfg = new CFG_T();
@@ -568,11 +625,12 @@ namespace IMG128
 
         private void btUpdateCfg_Click(object sender, EventArgs e)
         {
-            CFG_T cfg = alloc_CFG_T();            
+            CFG_T cfg = alloc_CFG_T();
+            
             setDefault(ref cfg);       //先设置参数为默认状态，保证各参数有效
 
             //通过控件参数更新配置信息
-            cfg.modelNum = Convert.ToInt32(tools.GetNumber(cBoxModelNum.Text));
+            cfg.modelNum = Convert.ToInt32(GetNumber(cBoxModelNum.Text));
             //WIRE_SETTING_T[] wire = cfg.wire;
             cfg.learnNum = Convert.ToInt32(cBoxLearnNum.Text);
            
@@ -580,12 +638,6 @@ namespace IMG128
             cfg.wire = new WIRE_SETTING_T[MAX_MODEL_NUM];
             //wire[0]
             //Analyse type
-            for(int i=0;i<cfg.wire.Count();i++)
-            {
-                cfg.wire[i]=xxcsControls[i].GetWIRE_SETTING();
-            }
-            #region
-            /*
             UInt32 type = 0;
             if (true == ckBoxCorePos1.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_CORE_POS;
@@ -602,29 +654,32 @@ namespace IMG128
             if (true == ckBoxSplay1.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_SPLAY;
             if (true == ckBoxSeal1.Checked)
-                type |= (UInt32)ANAL_TYPE.ANAL_SEAL;
+                type |= (UInt32)ANAL_TYPE.ANAL_IS_SEAL;
+            if (true == ckBoxSealOri1.Checked)
+                type |= (UInt32)ANAL_TYPE.ANAL_SEAL_ORI;
+
             cfg.wire[0].tol.analEN = (ANAL_TYPE)type;
 
-            cfg.wire[0].tol.sealPosP = Convert.ToSingle(tools.GetNumber(tBoxSealPosP1.Text));		//mm
-            cfg.wire[0].tol.sealPosN = Convert.ToSingle(tools.GetNumber(tBoxSealPosN1.Text));		//mm
-            cfg.wire[0].tol.corePosP = Convert.ToSingle(tools.GetNumber(tBoxCorePosP1.Text));		//mm
-            cfg.wire[0].tol.corePosN = Convert.ToSingle(tools.GetNumber(tBoxCorePosN1.Text));		//mm
-            cfg.wire[0].tol.stripPosP = Convert.ToSingle(tools.GetNumber(tBoxStripPosP1.Text));		//mm
-            cfg.wire[0].tol.stripPosN = Convert.ToSingle(tools.GetNumber(tBoxStripPosN1.Text));		//mm
-            cfg.wire[0].tol.stripLenP = Convert.ToSingle(tools.GetNumber(tBoxStripLenP1.Text));		//mm
-            cfg.wire[0].tol.stripLenN = Convert.ToSingle(tools.GetNumber(tBoxStripLenN1.Text));		//mm
+            cfg.wire[0].tol.sealPosP = Convert.ToSingle(GetNumber(tBoxSealPosP1.Text));		//mm
+            cfg.wire[0].tol.sealPosN = Convert.ToSingle(GetNumber(tBoxSealPosN1.Text));		//mm
+            cfg.wire[0].tol.corePosP = Convert.ToSingle(GetNumber(tBoxCorePosP1.Text));		//mm
+            cfg.wire[0].tol.corePosN = Convert.ToSingle(GetNumber(tBoxCorePosN1.Text));		//mm
+            cfg.wire[0].tol.stripPosP = Convert.ToSingle(GetNumber(tBoxStripPosP1.Text));		//mm
+            cfg.wire[0].tol.stripPosN = Convert.ToSingle(GetNumber(tBoxStripPosN1.Text));		//mm
+            cfg.wire[0].tol.stripLenP = Convert.ToSingle(GetNumber(tBoxStripLenP1.Text));		//mm
+            cfg.wire[0].tol.stripLenN = Convert.ToSingle(GetNumber(tBoxStripLenN1.Text));		//mm
 
-            cfg.wire[0].tol.sealWidthP = Convert.ToSingle(tools.GetNumber(tBoxSealWidthP1.Text));	//%
-            cfg.wire[0].tol.sealWidthN = Convert.ToSingle(tools.GetNumber(tBoxSealWidthN1.Text));	//%
-            cfg.wire[0].tol.coreWidthP = Convert.ToSingle(tools.GetNumber(tBoxCoreWidthP1.Text));	//%
-            cfg.wire[0].tol.coreWidthN = Convert.ToSingle(tools.GetNumber(tBoxCoreWidthN1.Text));	//%
+            cfg.wire[0].tol.sealWidthP = Convert.ToSingle(GetNumber(tBoxSealWidthP1.Text));	//%
+            cfg.wire[0].tol.sealWidthN = Convert.ToSingle(GetNumber(tBoxSealWidthN1.Text));	//%
+            cfg.wire[0].tol.coreWidthP = Convert.ToSingle(GetNumber(tBoxCoreWidthP1.Text));	//%
+            cfg.wire[0].tol.coreWidthN = Convert.ToSingle(GetNumber(tBoxCoreWidthN1.Text));	//%
 
-            cfg.wire[0].tol.wireSplay = Convert.ToSingle(tools.GetNumber(tBoxSprayP1.Text));		    //%
+            cfg.wire[0].tol.wireSplay = Convert.ToSingle(GetNumber(tBoxSprayP1.Text));		    //%
 
-            cfg.wire[0].tol.variationFilter = Convert.ToSingle(tools.GetNumber(tBoxVariationFilter1.Text));//mm
-            cfg.wire[0].tol.sealRatio = Convert.ToSingle(tools.GetNumber(tBoxSealRatio1.Text));		//%
-            cfg.wire[0].tol.sealLimit = Convert.ToSingle(tools.GetNumber(tBoxSealLimit1.Text));		//%
-            cfg.wire[0].tol.stripLimit = Convert.ToSingle(tools.GetNumber(tBoxStripLimit1.Text));	//%
+            cfg.wire[0].tol.variationFilter = Convert.ToSingle(GetNumber(tBoxVariationFilter1.Text));//mm
+            cfg.wire[0].tol.sealRatio = Convert.ToSingle(GetNumber(tBoxSealRatio1.Text));		//%
+            cfg.wire[0].tol.sealLimit = Convert.ToSingle(GetNumber(tBoxSealLimit1.Text));		//%
+            cfg.wire[0].tol.stripLimit = Convert.ToSingle(GetNumber(tBoxStripLimit1.Text));	//%
 
             //wire[1]   能不能将控件做成数组？这样就可以用for循环，就不用以下拷贝代码
             type = 0;
@@ -643,115 +698,90 @@ namespace IMG128
             if (true == ckBoxSplay2.Checked)
                 type |= (UInt32)ANAL_TYPE.ANAL_SPLAY;
             if (true == ckBoxSeal2.Checked)
-                type |= (UInt32)ANAL_TYPE.ANAL_SEAL;
+                type |= (UInt32)ANAL_TYPE.ANAL_IS_SEAL;
+            if (true == ckBoxSealOri2.Checked)
+                type |= (UInt32)ANAL_TYPE.ANAL_SEAL_ORI;
             cfg.wire[1].tol.analEN = (ANAL_TYPE)type;
 
-            cfg.wire[1].tol.sealPosP = Convert.ToSingle(tools.GetNumber(tBoxSealPosP2.Text));		//mm
-            cfg.wire[1].tol.sealPosN = Convert.ToSingle(tools.GetNumber(tBoxSealPosN2.Text));		//mm
-            cfg.wire[1].tol.corePosP = Convert.ToSingle(tools.GetNumber(tBoxCorePosP2.Text));		//mm
-            cfg.wire[1].tol.corePosN = Convert.ToSingle(tools.GetNumber(tBoxCorePosN2.Text));		//mm
-            cfg.wire[1].tol.stripPosP = Convert.ToSingle(tools.GetNumber(tBoxStripPosP2.Text));		//mm
-            cfg.wire[1].tol.stripPosN = Convert.ToSingle(tools.GetNumber(tBoxStripPosN2.Text));		//mm
-            cfg.wire[1].tol.stripLenP = Convert.ToSingle(tools.GetNumber(tBoxStripLenP2.Text));		//mm
-            cfg.wire[1].tol.stripLenN = Convert.ToSingle(tools.GetNumber(tBoxStripLenN2.Text));		//mm
+            cfg.wire[1].tol.sealPosP = Convert.ToSingle(GetNumber(tBoxSealPosP2.Text));		//mm
+            cfg.wire[1].tol.sealPosN = Convert.ToSingle(GetNumber(tBoxSealPosN2.Text));		//mm
+            cfg.wire[1].tol.corePosP = Convert.ToSingle(GetNumber(tBoxCorePosP2.Text));		//mm
+            cfg.wire[1].tol.corePosN = Convert.ToSingle(GetNumber(tBoxCorePosN2.Text));		//mm
+            cfg.wire[1].tol.stripPosP = Convert.ToSingle(GetNumber(tBoxStripPosP2.Text));		//mm
+            cfg.wire[1].tol.stripPosN = Convert.ToSingle(GetNumber(tBoxStripPosN2.Text));		//mm
+            cfg.wire[1].tol.stripLenP = Convert.ToSingle(GetNumber(tBoxStripLenP2.Text));		//mm
+            cfg.wire[1].tol.stripLenN = Convert.ToSingle(GetNumber(tBoxStripLenN2.Text));		//mm
 
-            cfg.wire[1].tol.sealWidthP = Convert.ToSingle(tools.GetNumber(tBoxSealWidthP2.Text));	//%
-            cfg.wire[1].tol.sealWidthN = Convert.ToSingle(tools.GetNumber(tBoxSealWidthN2.Text));	//%
-            cfg.wire[1].tol.coreWidthP = Convert.ToSingle(tools.GetNumber(tBoxCoreWidthP2.Text));	//%
-            cfg.wire[1].tol.coreWidthN = Convert.ToSingle(tools.GetNumber(tBoxCoreWidthN2.Text));	//%
+            cfg.wire[1].tol.sealWidthP = Convert.ToSingle(GetNumber(tBoxSealWidthP2.Text));	//%
+            cfg.wire[1].tol.sealWidthN = Convert.ToSingle(GetNumber(tBoxSealWidthN2.Text));	//%
+            cfg.wire[1].tol.coreWidthP = Convert.ToSingle(GetNumber(tBoxCoreWidthP2.Text));	//%
+            cfg.wire[1].tol.coreWidthN = Convert.ToSingle(GetNumber(tBoxCoreWidthN2.Text));	//%
 
-            cfg.wire[1].tol.wireSplay = Convert.ToSingle(tools.GetNumber(tBoxSprayP2.Text));		    //%
+            cfg.wire[1].tol.wireSplay = Convert.ToSingle(GetNumber(tBoxSprayP2.Text));		    //%
 
-            cfg.wire[1].tol.variationFilter = Convert.ToSingle(tools.GetNumber(tBoxVariationFilter2.Text));//mm
-            cfg.wire[1].tol.sealRatio = Convert.ToSingle(tools.GetNumber(tBoxSealRatio2.Text));		//%
-            cfg.wire[1].tol.sealLimit = Convert.ToSingle(tools.GetNumber(tBoxSealLimit2.Text));		//%
-            cfg.wire[1].tol.stripLimit = Convert.ToSingle(tools.GetNumber(tBoxStripLimit2.Text));	//%
+            cfg.wire[1].tol.variationFilter = Convert.ToSingle(GetNumber(tBoxVariationFilter2.Text));//mm
+            cfg.wire[1].tol.sealRatio = Convert.ToSingle(GetNumber(tBoxSealRatio2.Text));		//%
+            cfg.wire[1].tol.sealLimit = Convert.ToSingle(GetNumber(tBoxSealLimit2.Text));		//%
+            cfg.wire[1].tol.stripLimit = Convert.ToSingle(GetNumber(tBoxStripLimit2.Text));	//%
 
-            */
-            #endregion
-            #region
-            //cfg.wire[2] = xxcs1.GetWIRE_SETTING();                                                            //这里的xxcs线型参数是自定义的控件，直接通过控件获取需要的属性；
-            /*
-            int indexWireSetting = 0;
-            for(int i= tabControl2.TabPages.Count - MAX_MODEL_NUM; i< tabControl2.TabPages.Count;i++)            //从第四（tabControl2.TabPages.Count - MAX_MODEL_NUM）个page开始
-            {
-                for(int j=0;j< tabControl2.TabPages[i].Controls.Count;j++)
-                {
-                    string typeName = tabControl2.TabPages[i].Controls[j].GetType().ToString();
-                    if (typeName.Equals("IMG128.xxcs"))
-                    {
-                        cfg.wire[indexWireSetting] = ((xxcs)tabControl2.TabPages[i].Controls[j]).GetWIRE_SETTING();         //这里的xxcs线型参数是自定义的控件，直接通过控件获取需要的属性；
-                        indexWireSetting++;
-                    }
-                }
-            }*/
-            #endregion
             //输出
             cfg.outputMode = new TYPE_OUTPUT[OUTPUT_NUM];
             cfg.outputWireIdx = new int[OUTPUT_NUM];
             cfg.outputDelay = new int[OUTPUT_NUM];
             cfg.outputWidth = new int[OUTPUT_NUM];
-             
+
             //输出0
-            for(int i=0;i<cfg.outputMode.Count();i++)
-            {
-                cfg.outputMode[i] = (TYPE_OUTPUT)outputControls[i].getOutputMode();
-                cfg.outputWireIdx[0] = Convert.ToInt32(tools.GetNumber(outputControls[i].cBoxOutWire.Text));     //输出对应的线型序号
-                cfg.outputDelay[0] = Convert.ToInt32(tools.GetNumber(outputControls[i].tBoxOutDelay.Text));          //输出延时ms
-                cfg.outputWidth[0] = Convert.ToInt32(tools.GetNumber(outputControls[i].tBoxDuration.Text));		//输出脉宽
-            }
-            #region 原来的输出控件获取方法
-            /*
             UInt32 output = 0;
             if (rBtnNC1.Checked)
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_NC;
+
+
             if (cBoxOutMode1.Text == "合格品输出脉冲")
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_PASS;
             else if (cBoxOutMode1.Text == "不良品输出脉冲")
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_FAIL;
             else if (cBoxOutMode1.Text == "合格/不良品都输出脉冲")
-                output |= (UInt32)TYPE_OUTPUT.OUTPUT_ANY;                
+                output |= (UInt32)TYPE_OUTPUT.OUTPUT_ANY;
+                
             if (rBtnIgnoreFirst1.Checked)
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_IGN_FIRST;
             else if (rBtnIgnoreLearn1.Checked)
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_IGN_LEARN;
             cfg.outputMode[0] = (TYPE_OUTPUT)output;
-            cfg.outputWireIdx[0] = Convert.ToInt32(tools.GetNumber(cBoxOutWire1.Text));		//输出对应的线型序号
-            cfg.outputDelay[0] = Convert.ToInt32(tools.GetNumber(tBoxOutDelay1.Text));			//输出延时ms
-            cfg.outputWidth[0] = Convert.ToInt32(tools.GetNumber(tBoxDuration1.Text));		//输出脉宽
+
+            cfg.outputWireIdx[0] = Convert.ToInt32(GetNumber(cBoxOutWire1.Text));		//输出对应的线型序号
+            cfg.outputDelay[0] = Convert.ToInt32(GetNumber(tBoxOutDelay1.Text));			//输出延时ms
+            cfg.outputWidth[0] = Convert.ToInt32(GetNumber(tBoxDuration1.Text));		//输出脉宽
+
             //输出1   能不能将控件做成数组？这样就可以用for循环，就不用以下拷贝代码
             output = 0;
             if (rBtnNC2.Checked)
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_NC;
+
+
             if (cBoxOutMode2.Text == "合格品输出脉冲")
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_PASS;
             else if (cBoxOutMode2.Text == "不良品输出脉冲")
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_FAIL;
             else if (cBoxOutMode2.Text == "合格/不良品都输出脉冲")
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_ANY;
+
             if (rBtnIgnoreFirst2.Checked)
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_IGN_FIRST;
             else if (rBtnIgnoreLearn2.Checked)
                 output |= (UInt32)TYPE_OUTPUT.OUTPUT_IGN_LEARN;
             cfg.outputMode[1] = (TYPE_OUTPUT)output;
 
-            cfg.outputWireIdx[1] = Convert.ToInt32(tools.GetNumber(cBoxOutWire2.Text));		//输出对应的线型序号
-            cfg.outputDelay[1] = Convert.ToInt32(tools.GetNumber(tBoxOutDelay2.Text));			//输出延时ms
-            cfg.outputWidth[1] = Convert.ToInt32(tools.GetNumber(tBoxDuration2.Text));		//输出脉宽
-            */
-            #endregion
+            cfg.outputWireIdx[1] = Convert.ToInt32(GetNumber(cBoxOutWire2.Text));		//输出对应的线型序号
+            cfg.outputDelay[1] = Convert.ToInt32(GetNumber(tBoxOutDelay2.Text));			//输出延时ms
+            cfg.outputWidth[1] = Convert.ToInt32(GetNumber(tBoxDuration2.Text));		//输出脉宽
+
 
             //输入
             cfg.inputMode = new TYPE_INPUT[INPUT_NUM];
 
-            //UInt32 input = 0;
-            for(int i=0;i<inputControls.Count;i++)
-            {
-                cfg.inputMode[i] = (TYPE_INPUT)inputControls[i].updateInfo();
-            }
-            #region 原来的输入控件获取方法
-            /*
             //输入1  能不能将控件做成数组？这样就可以用for循环，就不用以下拷贝代码
+            UInt32 input = 0;
             if(cBoxInputModeLvl1.Text == "进入学习模式")
                 input |= (UInt32 )TYPE_INPUT.INPUT_LEARN;
             else if(cBoxInputModeLvl1.Text =="触发采样")
@@ -809,19 +839,19 @@ namespace IMG128
             else if (cBoxInputPolLvl4.Text == "下降沿触发")
                 input |= (UInt32)TYPE_INPUT.INPUT_NEG;
             cfg.inputMode[3] = (TYPE_INPUT)input;
-            */
-            #endregion
-            cfg.firingTimeOut = Convert.ToInt32(tools.GetNumber(tBoxFiringTimeOut.Text));					//触发信号超时设置
-            cfg.minSetupDuration = Convert.ToInt32(tools.GetNumber(tBoxMinSetupDuration.Text));				//进入setup模式前，输入信号有效的最小持续时间，用于在没有上位机时手动操作进入学习模式
 
-            cfg.senThresh = Convert.ToInt32(tools.GetNumber(tBoxSensorSensitivity.Text));						//CCD sensor threshold %
-            cfg.learnNum = Convert.ToInt32(tools.GetNumber(cBoxLearnNum.Text));							//学习模式个数 1～16次 初值：1  设置在学习时以几根良品的波形平均值作为基准波形。
+            cfg.firingTimeOut = Convert.ToInt32(GetNumber(tBoxFiringTimeOut.Text));					//触发信号超时设置
+            cfg.minSetupDuration = Convert.ToInt32(GetNumber(tBoxMinSetupDuration.Text));				//进入setup模式前，输入信号有效的最小持续时间，用于在没有上位机时手动操作进入学习模式
+
+            cfg.senThresh = Convert.ToInt32(GetNumber(tBoxSensorSensitivity.Text));						//CCD sensor threshold %
+            cfg.learnNum = Convert.ToInt32(GetNumber(cBoxLearnNum.Text));							//学习模式个数 1～16次 初值：1  设置在学习时以几根良品的波形平均值作为基准波形。
 
             //速度补偿使能
             if (ckBoxAutoAdjSpeed.Checked)
                 cfg.isSpeedAdj = 1;
             else
                 cfg.isSpeedAdj = 0;
+
             //输出有效期间忽略输入（忽略返程阶段）
             if (checkBoxOutIgnoreWhileOutActive.Checked)
                 cfg.isIgnInWhenOut = 1;
@@ -829,13 +859,15 @@ namespace IMG128
                 cfg.isIgnInWhenOut = 0;
 
             cfg.valid = CFG_VALID;	//设置配置有效标识
+
             if(CfgCheck(ref cfg))
             {
                 //IMG128 hParent = (IMG128)this.Parent;
                 hParent.devCfg = cfg;
                 if(hParent.serialPort1.IsOpen)
+                //if (Main.serialPort1.IsOpen)
                 {
-                    byte[] cfgBuf = tools.StructToBytes(cfg);    //将CFG_T转换为byte[]
+                    byte[] cfgBuf = StructToBytes(cfg);    //将CFG_T转换为byte[]
                     byte[] frm = hParent.devProtocol.GetCmdFrm(Protocol.FRAME_TYPE_SC, cfgBuf, (ushort)cfgBuf.Length);  //生成串口数据帧字符数组
                     hParent.serialPort1.Write(frm, 0, frm.Length);      //发送串口数据
                 }
@@ -843,12 +875,43 @@ namespace IMG128
 
         }
 
-       
+        //StructToBytes
+        public byte[] StructToBytes(object obj)
+        {
+            int rawsize = Marshal.SizeOf(obj);
+            IntPtr buffer = Marshal.AllocHGlobal(rawsize);
+            Marshal.StructureToPtr(obj, buffer, false);
+            byte[] rawdatas = new byte[rawsize];
+            Marshal.Copy(buffer, rawdatas, 0, rawsize);
+            Marshal.FreeHGlobal(buffer);
+            return rawdatas;
+        }
 
         private void DevCfgDlg_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
-            e.Cancel = true;
+            
         }
+
+        private void btnSetupCCD_Click(object sender, EventArgs e)
+        {
+            if (btnSetupCCD.Text == "进入传感器设置模式")
+            {
+                btnSetupCCD.Text = "退出传感器设置模式";
+                byte[] mode = new byte[Marshal.SizeOf(typeof(UInt32))];
+                mode[0] = (byte)CH_MODE.SETUP;
+                byte[] frm = hParent.devProtocol.GetCmdFrm(Protocol.FRAME_TYPE_SM, mode, (ushort)Marshal.SizeOf(typeof(UInt32)));
+                hParent.serialPort1.Write(frm, 0, frm.Length);
+
+            }
+            else
+            {
+                btnSetupCCD.Text = "进入传感器设置模式";
+                byte[] mode = new byte[Marshal.SizeOf(typeof(UInt32))];
+                mode[0] = (byte)CH_MODE.WORK;
+                byte[] frm = hParent.devProtocol.GetCmdFrm(Protocol.FRAME_TYPE_SM, mode, (ushort)Marshal.SizeOf(typeof(UInt32)));
+                hParent.serialPort1.Write(frm, 0, frm.Length);
+            }
+        }
+
     }
 }

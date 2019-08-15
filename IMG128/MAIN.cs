@@ -19,6 +19,7 @@ enum CH_MODE
     LEARN = 2,
     CH_OFF = 3,
     PASS = 4,
+    SETUP = 5,
     ERR = 8
 };
 
@@ -62,8 +63,6 @@ namespace IMG128
 
         }
 
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             string [] ports = SerialPort.GetPortNames();
@@ -77,6 +76,7 @@ namespace IMG128
             this.Height = 738;
             pictureBox1.Width = imgWidth;
             pictureBox1.Height = imgHeight;
+
             //timer1.AutoReset = true;
         }
 
@@ -267,7 +267,7 @@ namespace IMG128
                 dlgDevCfg = new DevCfgDlg(this);
             if (dlgDevCfg.IsDisposed)
                 dlgDevCfg = new DevCfgDlg(this);
-            dlgDevCfg.Visible = true;
+            dlgDevCfg.Show();
 
             openDevCfgDlgTimeOut = 0;
         }
@@ -285,12 +285,11 @@ namespace IMG128
             sb.Append(tmp);
             tmp = string.Format("判定项目   ：{0:X}\r\n", rec.analEN);
             sb.Append(tmp);
-
             tmp = string.Format("线端位置   ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
-                Convert.ToSingle(rec.corePosMax * REC.PIX_SIZE).ToString("0.000"),
-                Convert.ToSingle(rec.corePosMin * REC.PIX_SIZE).ToString("0.000"),
-                Convert.ToSingle(rec.corePosStd * REC.PIX_SIZE).ToString("0.000"),
-                Convert.ToSingle(rec.corePos * REC.PIX_SIZE).ToString("0.000"));
+             Convert.ToSingle(rec.corePosMax * REC.PIX_SIZE).ToString("0.000"),
+             Convert.ToSingle(rec.corePosMin * REC.PIX_SIZE).ToString("0.000"),
+             Convert.ToSingle(rec.corePosStd * REC.PIX_SIZE).ToString("0.000"),
+             Convert.ToSingle(rec.corePos * REC.PIX_SIZE).ToString("0.000"));
             sb.Append(tmp);
             tmp = string.Format("线径       ：最大:{0,-7}  最小:{1,-7}  基准:{2,-7} 检测:{3,-7}\r\n",
                 Convert.ToSingle(rec.coreWidthMax).ToString("0.000"),
@@ -329,7 +328,7 @@ namespace IMG128
                 Convert.ToSingle(rec.splay).ToString("0.000"));
             sb.Append(tmp);
 
-            if (0 != rec.isSeal)
+            if(0 != rec.isSeal)
                 tmp = string.Format("有无防水栓 ：有\r\n");
             else
                 tmp = string.Format("有无防水栓 ：无\r\n");
@@ -346,26 +345,27 @@ namespace IMG128
 
 
         //串口数据帧中type的定义，UInt16型，保存两个字节ASCII码
-        const ushort FRAME_TYPE_LI = 0x494C;	//"LI" Login
-        const ushort FRAME_TYPE_LO = 0x4F4C;	//"LO" Logout
-        const ushort FRAME_TYPE_SM = 0x4D53;	//"SM" SetMode
-        const ushort FRAME_TYPE_GC = 0x4347;	//"GC" GetConfig
-        const ushort FRAME_TYPE_SC = 0x4353;	//"SC" SetConfig 
-        const ushort FRAME_TYPE_GR = 0x5247;	//"GR" Get record
-        const ushort FRAME_TYPE_CR = 0x5243;	//"CR" clr record
-        const ushort FRAME_TYPE_GS = 0x5347;	//"GS" Get state
-        const ushort FRAME_TYPE_RA = 0x4152;	//"RA" Reset Alarm
-        const ushort FRAME_TYPE_RP = 0x5052;	//"RP" Report
-        const ushort FRAME_TYPE_AL = 0x4C41;	//"AL" Alarm
-        const ushort FRAME_TYPE_CE = 0x4543;	//"CE" Check ENC
-        const ushort FRAME_TYPE_SN = 0x4E53;	//"SN" Get SN
-        const ushort FRAME_TYPE_RG = 0x4752;	//"RG" Registration
-        const ushort FRAME_TYPE_RC = 0x4352;	//"RC" Reset counter
-        const ushort FRAME_TYPE_ST = 0x5453;	//"ST" Set RTC Time
-        const ushort FRAME_TYPE_MS = 0x534D;	//"MS" Mode select
-        const ushort FRAME_TYPE_FS = 0x5346;	//"FS" Factory Setting
-        const ushort FRAME_TYPE_DT = 0x5444;	//"DT" Start Detection
-        const ushort FRAME_TYPE_NK = 0x4E4B;	//"NK" Device busy
+        //const ushort FRAME_TYPE_LI = 0x494C;	//"LI" Login
+        //const ushort FRAME_TYPE_LO = 0x4F4C;	//"LO" Logout
+        //const ushort FRAME_TYPE_SM = 0x4D53;	//"SM" SetMode
+        //const ushort FRAME_TYPE_GC = 0x4347;	//"GC" GetConfig
+        //const ushort FRAME_TYPE_SC = 0x4353;	//"SC" SetConfig 
+        //const ushort FRAME_TYPE_GR = 0x5247;	//"GR" Get record
+        //const ushort FRAME_TYPE_CR = 0x5243;	//"CR" clr record
+        //const ushort FRAME_TYPE_GS = 0x5347;	//"GS" Get state
+        //const ushort FRAME_TYPE_RA = 0x4152;	//"RA" Reset Alarm
+        //const ushort FRAME_TYPE_RP = 0x5052;	//"RP" Report
+        //const ushort FRAME_TYPE_AL = 0x4C41;	//"AL" Alarm
+        //const ushort FRAME_TYPE_CE = 0x4543;	//"CE" Check ENC
+        //const ushort FRAME_TYPE_SN = 0x4E53;	//"SN" Get SN
+        //const ushort FRAME_TYPE_RG = 0x4752;	//"RG" Registration
+        //const ushort FRAME_TYPE_RC = 0x4352;	//"RC" Reset counter
+        //const ushort FRAME_TYPE_ST = 0x5453;	//"ST" Set RTC Time
+        //const ushort FRAME_TYPE_MS = 0x534D;	//"MS" Mode select
+        //const ushort FRAME_TYPE_FS = 0x5346;	//"FS" Factory Setting
+        //const ushort FRAME_TYPE_DT = 0x5444;	//"DT" Start Detection
+        
+        //const ushort FRAME_TYPE_NK = 0x4E4B;	//"NK" Device busy
 
         //100ms timer
         COMM_FRAME_T frameRX = new COMM_FRAME_T();  //保存串口收到的数据
@@ -390,9 +390,9 @@ namespace IMG128
                 type -= 0x2020; //两个字符转为大写
                 switch (type)
                 {
-                    case FRAME_TYPE_RP: ShowRec(devRec.RecFrameDeal(frameRX)); break;
-                    case FRAME_TYPE_NK: MessageBox.Show("设备忙"); break;
-                    case FRAME_TYPE_GC:
+                    case Protocol.FRAME_TYPE_RP: ShowRec(devRec.RecFrameDeal(frameRX)); break;
+                    case Protocol.FRAME_TYPE_NK: MessageBox.Show("设备忙"); break;
+                    case Protocol.FRAME_TYPE_GC:
                         if (null == dlgDevCfg)
                             dlgDevCfg = new DevCfgDlg(this);
                         if (dlgDevCfg.IsDisposed)
@@ -400,21 +400,30 @@ namespace IMG128
 
                         dlgDevCfg.CfgFreameDeal(frameRX);
                         dlgDevCfg.UpdateShow(devCfg);
-                        dlgDevCfg.Show();
-                        dlgDevCfg.Visible = false;
                         if (openDevCfgDlgTimeOut > 0)
                         {
-                            dlgDevCfg.Visible = true;
+                            dlgDevCfg.Show();
                             openDevCfgDlgTimeOut = 0;
                         }
                         break;
-                    case FRAME_TYPE_SC: MessageBox.Show("更新设备信息成功！"); break;                    
+                    case Protocol.FRAME_TYPE_SC: MessageBox.Show("更新设备信息成功！"); break;
+                    case Protocol.FRAME_TYPE_LN:
+                        //传感器实时采集数据帧
+                        if (null == dlgDevCfg)
+                            dlgDevCfg = new DevCfgDlg(this);
+                        if (dlgDevCfg.IsDisposed)
+                            dlgDevCfg = new DevCfgDlg(this);
+                        dlgDevCfg.SensorFrameDeal(frameRX);
+                        break;
                     //case FRAME_TYPE_LI: COMM_cmdLI(port); break;
                     //case FRAME_TYPE_LO: COMM_cmdLO(port); break;
                     //case FRAME_TYPE_SM: COMM_cmdSM(port, p); break;
                     //case FRAME_TYPE_GR: COMM_cmdGR(port); break;
                     //case FRAME_TYPE_CR: COMM_cmdCR(port); break;
-                    //case FRAME_TYPE_GS: COMM_cmdGS(); break;
+                    case Protocol.FRAME_TYPE_GS: 
+                        //To do... show mode
+                        ; 
+                        break;
                     //case FRAME_TYPE_RA: COMM_cmdRA(port, p); break;
                     //case FRAME_TYPE_RC: COMM_cmdRC(port); break;		//20180902 清除计数器
                     //case FRAME_TYPE_ST: COMM_cmdST(port, p); break;	//20180902 同步系统时间

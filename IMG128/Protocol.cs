@@ -60,7 +60,8 @@ namespace IMG128
         public const UInt16 FRAME_TYPE_MS = 0x534D;	//"MS" Mode select
         public const UInt16 FRAME_TYPE_FS = 0x5346;	//"FS" Factory Setting
         public const UInt16 FRAME_TYPE_DT = 0x5444;	//"DT" Start Detection
-
+        public const UInt16 FRAME_TYPE_LN = 0x4E4C; //"LN" 传感器上传采样线数据
+        public const UInt16 FRAME_TYPE_NK = 0x4E4B;	//"NK" Device busy
 
         static  UInt16 DEF_FRM_LEN = 8;                                       //default frm len
         //static UInt16 FRM_LEN_SM	=	DEF_FRM_LEN + sizeof(CH_MODE);          //Set mode
@@ -72,7 +73,10 @@ namespace IMG128
         static UInt16 FRM_LEN_SC = (UInt16)(DEF_FRM_LEN + Marshal.SizeOf(typeof(CFG_T)));		    //Set Config 
         //static UInt16 FRM_LEN_ST = DEF_FRM_LEN;					                        //Set time
         static UInt16 FRM_LEN_MAX = FRM_LEN_RP;
-
+        //#define FRM_LEN_LN				(DEFAULT_PRO_CMD_LEN + sizeof(u16) * PIX_NUM)	//
+        static UInt16 FRM_LEN_LN = (UInt16)(DEF_FRM_LEN + sizeof(UInt16) * REC.PIX_NUM);
+        
+        //
         const char FRM_HEADER = '[';
         const char FRM_TAIL = ']';
         const byte DEF_CHECKSUM = 0x55; //default frm checksum
